@@ -3,7 +3,7 @@ This Project made in c for reserving tickets for movies
 
 This system let the user to reserve tickets running in theatre by signing up and using their credit to book ticket.
 
-System will automatically generate tickets with unique id to let user enter the movie theatre
+System will automatically generate tickets with unique id and user can use the ticket to enter.
 
 # Authors
 * Karun Arora - karunarora@cmail.carleton.ca
