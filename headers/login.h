@@ -8,11 +8,16 @@
 
 int userid;
 
+int admin;
 
 
-
+int admin_login_input();
 int customer_login_input();
-
+int admin_login(char* name, char* password);
 int customer_login(char *username, char* password);
+
+
+
+
 
 #endif // !_LOGIN_
