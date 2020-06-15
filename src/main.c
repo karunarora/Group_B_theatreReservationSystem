@@ -2,15 +2,21 @@
 #include<stdio.h>
 #include<conio.h>
 #include <mysql.h>
+#include "../headers/login.h"
+#include "../headers/movie.h"
 
 
 
-// this will initialize the connection
+
+/* This function will initiate the connection between project and the database
+*/
 void init_setup(char* user_name, char* password, char* url, char* database);
 char tempBuffer[500];
 
 
-// the main program with the menu system
+
+/* the main program with the menu system
+*/
 int main(int argc, char** argv)
 {
 	init_setup("root", "karun9855", "localhost", "theatrereservationsystem");
@@ -166,7 +172,9 @@ int main(int argc, char** argv)
 	return 0;
 }
 
-// setup and validate the connection with the sql database
+
+/*This function will Setup and validate the connection with the sql database
+*/
 void init_setup(char* user_name, char* password, char* url, char* database) {
 	strcpy(USER_NAME, user_name);
 	strcpy(PASSWORD, password);
