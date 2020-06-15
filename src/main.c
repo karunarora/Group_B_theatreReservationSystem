@@ -1,9 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<conio.h>
+#include <mysql.h>
 
-int main(){
 
-char option[50] = "";
+
+// this will initialize the connection
+void init_setup(char* user_name, char* password, char* url, char* database);
+char tempBuffer[500];
+
+
+// the main program with the menu system
+int main(int argc, char** argv)
+{
+	init_setup("root", "karun9855", "localhost", "theatrereservationsystem");
+	logout();
+	char option[50] = "";
 	while (strcmp(option, "e") != 0)
 	{
 		printf("\n\n1 for admin login\n");
@@ -152,5 +164,27 @@ char option[50] = "";
 		}
 	}
 	return 0;
-
 }
+
+// setup and validate the connection with the sql database
+void init_setup(char* user_name, char* password, char* url, char* database) {
+	strcpy(USER_NAME, user_name);
+	strcpy(PASSWORD, password);
+	strcpy(URL, url);
+	strcpy(DATABASE, database);
+	con = mysql_init(NULL);
+	if (con == NULL)
+	{
+		fprintf(stderr, "%s\n", mysql_error(con));
+		exit(0);
+	}
+	if (mysql_real_connect(con, URL, USER_NAME, PASSWORD, DATABASE, 0, NULL, 0) == NULL)
+	{
+		fprintf(stderr, "%s\n", mysql_error(con));
+		mysql_close(con);
+		exit(0);
+	}
+}
+
+
+
