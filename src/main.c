@@ -4,6 +4,7 @@
 #include <mysql.h>
 #include "../headers/login.h"
 #include "../headers/movie.h"
+#include "../headers/admin.h"
 
 
 
