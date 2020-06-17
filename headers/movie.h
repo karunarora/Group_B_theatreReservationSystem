@@ -8,7 +8,7 @@
 #include "setup.h"
 
 
-
+int input_date(char *tempBuffer);
 int add_movie_input();
 int update_movie_input();
 
