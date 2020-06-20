@@ -1,23 +1,21 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-#include<conio.h>
+#include<stdlib.h>
+//#include<conio.h>
 #include <mysql.h>
-#include "../headers/login.h"
-#include "../headers/movie.h"
-#include "../headers/admin.h"
+#include "../include/login.h"
+#include "../include/admin.h"
+#include "../include/movie.h"
+#include "../include/customer.h"
+//#include "../include/upcomming.h"
 
 
-
-
-/* This function will initiate the connection between project and the database
-*/
+// this will initialize the connection
 void init_setup(char* user_name, char* password, char* url, char* database);
 char tempBuffer[500];
 
 
-
-/* the main program with the menu system
-*/
+// the main program with the menu system
 int main(int argc, char** argv)
 {
 	init_setup("root", "karun9855", "localhost", "theatrereservationsystem");
@@ -173,9 +171,7 @@ int main(int argc, char** argv)
 	return 0;
 }
 
-
-/*This function will Setup and validate the connection with the sql database
-*/
+// setup and validate the connection with the sql database
 void init_setup(char* user_name, char* password, char* url, char* database) {
 	strcpy(USER_NAME, user_name);
 	strcpy(PASSWORD, password);

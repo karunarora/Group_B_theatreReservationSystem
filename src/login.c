@@ -1,4 +1,5 @@
-#include "../headers/login.h"
+#include "../include/login.h"
+
 
 // inputs the login
 int admin_login_input()
@@ -38,8 +39,6 @@ int admin_login(char* name, char* password) {
 	}
 	return 0;
 }
-
-
 
 // the input is asked from the user for the login
 int customer_login_input()
@@ -83,6 +82,5 @@ int customer_login(char * username, char* password) {
 
 	return userid;
 }
-
 
 

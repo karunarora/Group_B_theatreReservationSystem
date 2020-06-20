@@ -1,4 +1,5 @@
-#include "../headers/movie.h"
+#include "../include/movie.h"
+//#include "../include/upcomming.h"
 
 // inputs date
 int input_date(char* tempBuffer)
@@ -27,7 +28,9 @@ int input_date(char* tempBuffer)
 }
 
 
-
+/*This function takes input from the user and pass the arguements into the add_movie() function.
+This function is done by Karun Arora
+*/
 // aks the user to input moveie details
 int add_movie_input()
 {
@@ -93,6 +96,19 @@ int update_movie_input()
 	return 0;
 }
 
+// removes move
+int remove_movie_input()
+{
+	int movie_id;
+	printf("Enter Movie Id : ");
+	scanf("%d", &movie_id);
+	if (movie_exists(movie_id) != 0)
+	{
+		return 0;
+	}
+	remove_movie(movie_id);
+	return 0;
+}
 
 // add the movie int the datebase
 int add_movie(char* movie_name, char *  type,char* movie_date, char* movie_time, float movie_price) {
@@ -106,6 +122,19 @@ int add_movie(char* movie_name, char *  type,char* movie_date, char* movie_time,
 	return 0;
 }
 
+
+// removes moveie on id
+int remove_movie(int id)
+{
+	char sql_string[500] = "";
+	sprintf(sql_string, "delete from movie where id = %d", id);
+
+	if (mysql_query(con, sql_string)) {
+		printf("%s\n", mysql_error(con));
+		return 0;
+	}
+	return 0;
+}
 
 // updates the movie
 int update_movie(int id, char* movie_name,char *type ,char* movie_date, char* movie_time, float movie_price)
