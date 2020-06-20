@@ -1,4 +1,4 @@
-#include "../headers/admin.h"
+#include "../include/admin.h"
 
 
 
@@ -19,8 +19,34 @@ int total_earning(char* date) {
 	MYSQL_ROW row = mysql_fetch_row(result);
 	//fetch row from result
 	if (row) {
-		double d = atof(row[0]);
+		double d = stod(row[0]);
+		printf("%s\n",row[0]);
 		printf("The total income of movie tickets sold on '%s' are %.2f\n", date, d);
 	}
 	return 0;
 }
+//covert string to double
+double stod(const char* s){
+  double rez = 0, fact = 1;
+  if (*s == '-'){
+    s++;
+    fact = -1;
+  };
+  for (int point_seen = 0; *s; s++){
+    if (*s == '.'){
+      point_seen = 1; 
+      continue;
+    };
+    int d = *s - '0';
+    if (d >= 0 && d <= 9){
+      if (point_seen) fact /= 10.0f;
+      rez = rez * 10.0f + (float)d;
+    };
+  };
+  return rez * fact;
+};
+
+
+
+
+
