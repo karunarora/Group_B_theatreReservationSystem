@@ -1,7 +1,7 @@
 drop database if exists TheatreReservationSystem;
 create database TheatreReservationSystem;
 use TheatreReservationSystem;
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'theone';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'karun9855';
 create table admin(
     name varchar(24),
     password varchar(24)
