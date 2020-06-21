@@ -8,7 +8,7 @@
 #include "setup.h"
 #include "movie.h"
 
-
+int display_selling(char* date);
 int total_earning(char* date);
 
 double stod(const char* s);

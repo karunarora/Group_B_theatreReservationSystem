@@ -2,6 +2,30 @@
 
 
 
+
+// this will print all the selling information on a particular date
+int display_selling(char* date) {
+	char sql_string[500] = "";
+	// store the query
+	sprintf(sql_string, "select count(*) from movie join seats where movie.id = seats.movie and movie.movie_date = '%s';", date);
+	//execute the qury
+	mysql_query(con, sql_string);
+	//fetch results
+	MYSQL_RES* result = mysql_store_result(con);
+	if (result == NULL)
+	{
+		printf("%s", mysql_error(con));
+		return 0;
+	}
+	//fetch row from result
+	MYSQL_ROW row = mysql_fetch_row(result);
+	if (row) {
+		printf("The total no of movie tickets sold on '%s' are %s\n", date, row[0]);
+	}
+
+	return 0;
+}
+
 // this will print all the earning information on a particular date
 int total_earning(char* date) {
 	char sql_string[500] = "";
