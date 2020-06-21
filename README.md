@@ -14,5 +14,5 @@ System will automatically generate tickets with unique id and user can use the t
 # Installation
 Intallation steps can be found in this document ----
 
-#Acknowledgements
+# Acknowledgements
 Thank to our professor Dr. Cristina Ruiz Martin for guiding us throughout the course on how to develop the software.
