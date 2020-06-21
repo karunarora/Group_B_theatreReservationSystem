@@ -44,6 +44,26 @@ int username_exists(char *username) {
 }
 
 
+int update_customer_input()
+{
+	char name[50];
+	char password[50];
+	char sex;
+	printf("Enter Name : ");
+	scanf("%*c%[^\n]%*c",name);
+	printf("Enter Password : ");
+	scanf("%[^\n]%*c", password);
+	printf("Enter Gender (m/f): ");
+
+	scanf("%c", &sex);
+	if (sex == 'm' || sex == 'f' || sex == 'M' || sex == 'F')
+	{
+		update_customer(userid, name, sex, password);
+		return 0;
+	}
+	printf("Wrong input for Gender");
+	return 0;
+}
 
 
 
@@ -68,5 +88,14 @@ int add_customer( char* name,char *username, char sex,char *password) {
 	return 0;
 }
 
-
+int update_customer(int id, char* name, char sex,char *password) {
+	char sql_string[500] = "";
+	sprintf(sql_string, "update customer set name = '%s',  sex = '%c' ,password = '%s' where id = %d;", name, sex,password, id);
+	printf("Data Updated");
+	if (mysql_query(con, sql_string)) {
+		printf("%s", mysql_error(con));
+		return 1;
+	}
+	return 0;
+}
 

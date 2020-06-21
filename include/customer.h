@@ -12,6 +12,8 @@
 
 int add_customer_input();
 int add_customer( char* name,char *username, char sex,char *password);
+int update_customer_input();
+int update_customer( int id, char* name, char sex, char *password);
 
 
 
