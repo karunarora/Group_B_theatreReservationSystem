@@ -14,5 +14,5 @@ int admin_login_input();
 int customer_login_input();
 int admin_login(char* name, char* password);
 int customer_login(char *username, char* password);
-
+int logout();
 #endif // !_LOGIN_

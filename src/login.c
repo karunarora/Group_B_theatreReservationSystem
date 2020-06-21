@@ -84,3 +84,10 @@ int customer_login(char * username, char* password) {
 }
 
 
+// logout the user
+int logout()
+{
+	admin = -1;
+	userid = -1;
+	return 0;
+}
