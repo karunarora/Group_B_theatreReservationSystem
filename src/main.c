@@ -9,8 +9,10 @@
 #include "../include/customer.h"
 //#include "../include/upcomming.h"
 
+/* Function's declaration for initializes the connection 
+This function is done by Jasvir Kaur
+*/
 
-// this will initialize the connection
 void init_setup(char* user_name, char* password, char* url, char* database);
 char tempBuffer[500];
 
@@ -82,22 +84,22 @@ int main(int argc, char** argv)
 					}
 					else if (strcmp(option, "7") == 0)
 					{
-						display_customers();
+						//display_customers();
 					}
 					else if (strcmp(option, "8") == 0)
 					{
-						display_ticket_info_input();
+						//display_ticket_info_input();
 					}
 					else if (strcmp(option, "9") == 0)
 					{
-						display_upcommig_movie();
+						//display_upcommig_movie();
 					}
 					else if (strcmp(option, "10") == 0)
 					{
-						add_upcomming_movie_input();
+						//add_upcomming_movie_input();
 					}else if (strcmp(option, "11") == 0)
 					{
-						display_transaction();
+						//display_transaction();
 					}
 					else if (strcmp(option, "o") == 0)
 					{
@@ -113,7 +115,7 @@ int main(int argc, char** argv)
 			if (userid >= 1) {
 				while (strcmp(option, "o") != 0) {
 					printf("\n\n");
-					display_customer(userid);
+					//display_customer(userid);
 					printf("\n\n");
 					printf("1 to update\n");
 					printf("2 to list movies\n");
@@ -133,19 +135,19 @@ int main(int argc, char** argv)
 					}
 					else  if (strcmp(option, "3") == 0)
 					{
-						book_movie_input();
+						//book_movie_input();
 					}
 					else  if (strcmp(option, "4") == 0)
 					{
-						add_credit_input();
+						//add_credit_input();
 					}
 					else  if (strcmp(option, "5") == 0)
 					{
-						display_upcommig_movie();
+						//display_upcommig_movie();
 					}
 					else  if (strcmp(option, "6") == 0)
 					{
-						display_booked_movies(userid);
+						//display_booked_movies(userid);
 					}
 					else if (strcmp(option, "o") == 0)
 					{
@@ -170,8 +172,10 @@ int main(int argc, char** argv)
 	}
 	return 0;
 }
+/* This function setup and validate the connection with the sql database 
+This function is done by Jasvir Kaur
+*/
 
-// setup and validate the connection with the sql database
 void init_setup(char* user_name, char* password, char* url, char* database) {
 	strcpy(USER_NAME, user_name);
 	strcpy(PASSWORD, password);
