@@ -1,7 +1,9 @@
 #include "../include/login.h"
 
 
-// inputs the login
+/* This function takes the input from user and send them to admin login function
+This function is done by Harashdeep Kaur Minhas
+*/
 int admin_login_input()
 {
 	char name[50];
@@ -13,7 +15,9 @@ int admin_login_input()
 	return admin_login(name, password);
 }
 
-// the admin is verified from the database
+/* This function takes arguements from admin input function and verify credentials from db
+This function is done by Harashdeep Kaur Minhas
+*/
 int admin_login(char* name, char* password) {
 	char sql_string[500] = "";
 	sprintf(sql_string, "select * from admin where name='%s' and password = '%s'", name, password);
@@ -40,7 +44,9 @@ int admin_login(char* name, char* password) {
 	return 0;
 }
 
-// the input is asked from the user for the login
+/* This function takes the input from user and send them to customer login function
+This function is done by Paramveer Singh
+*/
 int customer_login_input()
 {
 	char username[50];
@@ -53,7 +59,9 @@ int customer_login_input()
 	return 0;
 }
 
-// customer login is varified from the database
+/* This function takes arguements from customer input function and verify credentials from db
+This function is done by Paramveer singh
+*/
 int customer_login(char * username, char* password) {
 	char sql_string[500] = "";
 	sprintf(sql_string, "select * from customer where username='%s' and password = '%s'", username, password);
@@ -84,7 +92,9 @@ int customer_login(char * username, char* password) {
 }
 
 
-// logout the user
+/* This function logouts the user
+This function is done by Paramveer singh
+*/
 int logout()
 {
 	admin = -1;

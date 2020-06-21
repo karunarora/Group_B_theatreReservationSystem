@@ -2,8 +2,10 @@
 
 
 
+/* This function displays the number of tickets sold on particular date
+This function is done by Jasvir Kaur
+*/
 
-// this will print all the selling information on a particular date
 int display_selling(char* date) {
 	char sql_string[500] = "";
 	// store the query
@@ -26,7 +28,10 @@ int display_selling(char* date) {
 	return 0;
 }
 
-// this will print all the earning information on a particular date
+/* This function displays the total earnings from tickets sold on particular date
+This function is done by Jasvir Kaur
+*/
+
 int total_earning(char* date) {
 	char sql_string[500] = "";
 	// store the query
@@ -49,7 +54,10 @@ int total_earning(char* date) {
 	}
 	return 0;
 }
-//covert string to double
+/* This function converts the string type into double type 
+This function is done by Karun Arora
+*/
+
 double stod(const char* s){
   double rez = 0, fact = 1;
   if (*s == '-'){
