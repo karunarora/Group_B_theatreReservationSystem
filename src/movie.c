@@ -148,3 +148,50 @@ int update_movie(int id, char* movie_name,char *type ,char* movie_date, char* mo
 	}
 	return 0;
 }
+
+
+// print all movies
+int display_movie() {
+	mysql_query(con, "select *from movie");
+	MYSQL_RES* result = mysql_store_result(con);
+
+	if (result == NULL)
+	{
+		printf("E%s\n\n", mysql_error(con));
+		return 0;
+	}
+
+	int num_fields = mysql_num_fields(result);
+
+	MYSQL_ROW row;
+	printf("***************************************MOVIES*****************************************\n");
+	printf("|%-4s", "ID");
+	printf("|");
+	printf("%-24s", "NAME");
+	printf("|");
+	printf("%-10s", "TYPE");
+	printf("|");
+	printf("%-10s", "DATE");
+	printf("|");
+	printf("%-10s", "TIME");
+	printf("|");
+	printf("%-5s|", "PRICE");
+	printf("\n\n");
+	while ((row = mysql_fetch_row(result)))
+	{
+		printf("|%-4s", row[0] ? row[0] : "NULL");
+		printf("|");
+		printf("%-24s", row[1] ? row[1] : "NULL");
+		printf("|");
+		printf("%-10s", row[2] ? row[2] : "NULL");
+		printf("|");
+		printf("%-10s", row[3] ? row[3] : "NULL");
+		printf("|");
+		printf("%-10s", row[4] ? row[4] : "NULL");
+		printf("|");
+		printf("%-5s", row[5] ? row[5] : "NULL");
+		printf("|\n");
+	}
+	mysql_free_result(result);
+	return 1;
+}
