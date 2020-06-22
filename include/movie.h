@@ -9,7 +9,7 @@
 
 
 int input_date(char *tempBuffer);
-
+int movie_exists(int movie_id);
 int add_movie_input();
 int update_movie_input();
 int remove_movie_input();

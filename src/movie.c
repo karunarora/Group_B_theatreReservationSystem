@@ -31,6 +31,26 @@ int input_date(char* tempBuffer)
 	return 1;
 }
 
+// checks if movie exists
+int movie_exists(int movie_id)
+{
+	char sql_string[500] = "";
+	sprintf(sql_string, "select *from movie where id = %d;", movie_id);
+	mysql_query(con, sql_string);
+	MYSQL_RES* result = mysql_store_result(con);
+	if (result == NULL)
+	{
+		printf("%s", mysql_error(con));
+		return 1;
+	}
+	int num_rows = mysql_num_rows(result);
+	if (num_rows == 0) {
+		printf("%s\n", "NO MOVIE EXIST");
+		return 1;
+	}
+	return 0;
+}
+
 
 /*This function takes input from the user and pass the arguements into the add_movie() function.
 This function is done by Karun Arora
@@ -78,7 +98,7 @@ int update_movie_input()
 	int mins = 0;
 	printf("Enter Movie Id : ");
 	scanf("%d", &movie_id);
-	if (0)//movie_exists(movie_id) != 0)
+	if (movie_exists(movie_id) != 0)
 	{
 		return 0;
 	}
@@ -109,7 +129,7 @@ int remove_movie_input()
 	int movie_id;
 	printf("Enter Movie Id : ");
 	scanf("%d", &movie_id);
-	if (0)//movie_exists(movie_id) != 0)
+	if (movie_exists(movie_id) != 0)
 	{
 		return 0;
 	}
