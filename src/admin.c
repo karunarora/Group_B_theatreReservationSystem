@@ -49,7 +49,7 @@ int total_earning(char* date) {
 	//fetch row from result
 	if (row) {
 		double d = stod(row[0]);
-		printf("%s\n",row[0]);
+		//printf("%s\n",row[0]);
 		printf("The total income of movie tickets sold on '%s' are %.2f\n", date, d);
 	}
 	return 0;
