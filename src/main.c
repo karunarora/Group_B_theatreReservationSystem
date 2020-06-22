@@ -135,7 +135,7 @@ int main(int argc, char** argv)
 					}
 					else  if (strcmp(option, "3") == 0)
 					{
-						//book_movie_input();
+						book_movie_input();
 					}
 					else  if (strcmp(option, "4") == 0)
 					{
