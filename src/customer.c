@@ -1,5 +1,54 @@
 #include "../include/customer.h"
 
+
+
+
+
+// display all the customers
+int display_customers() {
+	mysql_query(con, "SELECT * FROM CUSTOMER");
+	MYSQL_RES* result = mysql_store_result(con);
+
+	if (result == NULL)
+	{
+		printf("%s", mysql_error(con));
+		return 0;
+	}
+
+	int num_fields = mysql_num_fields(result);
+
+	MYSQL_ROW row;
+	printf("\n\n\n***************************************CUSTOMERS*****************************************\n");
+
+	printf("|%-4s", "ID");
+	printf("|");
+	printf("%-24s", "USERNAME");
+	printf("|");
+	printf("%-24s", "NAME");
+	printf("|");
+	printf("%-5s", "SEX");
+	printf("|");
+	printf("%-7s", "BALANCE");
+	printf("|");
+	printf("\n\n");
+
+	while ((row = mysql_fetch_row(result)))
+	{
+		printf("|%-4s", row[0] ? row[0] : "NULL");
+		printf("|");
+		printf("%-24s", row[1] ? row[1] : "NULL");
+		printf("|");
+		printf("%-24s", row[2] ? row[2] : "NULL");
+		printf("|");
+		printf("%-5s", row[3] ? row[3] : "NULL");
+		printf("|");
+		printf("%-7s", row[4] ? row[4] : "NULL");
+		printf("|\n");
+	}
+	mysql_free_result(result);
+	return 1;
+}
+
 /* This function takes the input from user for registering new customer and send details to add_customer() function
 This function is done by Paramveer singh
 */
@@ -244,3 +293,61 @@ float stof(const char* s){
   };
   return rez * fact;
 };
+
+
+
+
+void display_current_customer()
+{
+	
+}
+
+
+
+
+
+// display customer on id
+int display_customer(int id)
+{
+	char buf[100];
+	sprintf(buf, "SELECT * FROM CUSTOMER where id = %d",id);
+	mysql_query(con,buf );
+	MYSQL_RES* result = mysql_store_result(con);
+
+	if (result == NULL)
+	{
+		printf("%s", mysql_error(con));
+		return 0;
+	}
+
+	int num_fields = mysql_num_fields(result);
+
+	MYSQL_ROW row;
+	printf("|%-4s", "ID");
+	printf("|");
+	printf("%-24s", "USERNAME");
+	printf("|");
+	printf("%-24s", "NAME");
+	printf("|");
+	printf("%-5s", "SEX");
+	printf("|");
+	printf("%-7s", "BALANCE");
+	printf("|");
+	printf("\n");
+
+	while ((row = mysql_fetch_row(result)))
+	{
+		printf("|%-4s", row[0] ? row[0] : "NULL");
+		printf("|");
+		printf("%-24s", row[1] ? row[1] : "NULL");
+		printf("|");
+		printf("%-24s", row[2] ? row[2] : "NULL");
+		printf("|");
+		printf("%-5s", row[3] ? row[3] : "NULL");
+		printf("|");
+		printf("%-7s", row[4] ? row[4] : "NULL");
+		printf("|\n");
+	}
+	mysql_free_result(result);
+	return 0;
+}

@@ -84,7 +84,7 @@ int main(int argc, char** argv)
 					}
 					else if (strcmp(option, "7") == 0)
 					{
-						//display_customers();
+						display_customers();
 					}
 					else if (strcmp(option, "8") == 0)
 					{
@@ -115,7 +115,7 @@ int main(int argc, char** argv)
 			if (userid >= 1) {
 				while (strcmp(option, "o") != 0) {
 					printf("\n\n");
-					//display_customer(userid);
+					display_customer(userid);
 					printf("\n\n");
 					printf("1 to update\n");
 					printf("2 to list movies\n");
