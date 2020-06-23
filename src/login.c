@@ -60,7 +60,7 @@ int customer_login_input()
 }
 
 /* This function takes arguements from customer input function and verify credentials from db
-This function is done by Paramveer singh
+
 */
 int customer_login(char * username, char* password) {
 	char sql_string[500] = "";
@@ -93,7 +93,7 @@ int customer_login(char * username, char* password) {
 
 
 /* This function logouts the user
-This function is done by Paramveer singh
+
 */
 int logout()
 {

@@ -1,11 +1,17 @@
+/**
+ * @file.admin.c
+ *
+ * @brief all admin functionalities of system will be handled, in this file. 
+ *
+ * @author Jasvir Kaur - jasvirkaur@cmail.carleton.ca
+ * @author Karun Arora - karunarora@cmail.carleton.ca
+ * @author Harashdeep Kaur Minhas - harashdeepkaurminhas@cmail.carleton.ca
+ * @author Paramveer Singh - paramveersingh3@cmail.carleton.ca
+ */
 #include "../include/admin.h"
 
 
-
-/* This function displays the number of tickets sold on particular date
-This function is done by Jasvir Kaur
-*/
-
+// this will print all the selling information on a particular date
 int display_selling(char* date) {
 	char sql_string[500] = "";
 	// store the query
@@ -27,11 +33,7 @@ int display_selling(char* date) {
 
 	return 0;
 }
-
-/* This function displays the total earnings from tickets sold on particular date
-This function is done by Jasvir Kaur
-*/
-
+// this will print all the earning information on a particular date
 int total_earning(char* date) {
 	char sql_string[500] = "";
 	// store the query
@@ -54,9 +56,6 @@ int total_earning(char* date) {
 	}
 	return 0;
 }
-/* This function converts the string type into double type 
-This function is done by Karun Arora
-*/
 
 double stod(const char* s){
   double rez = 0, fact = 1;
@@ -80,5 +79,31 @@ double stod(const char* s){
 
 
 
+//  wraper function for printing ticket info
+void display_ticket_info_input() {
+	int movie_id=-1;
 
+		display_ticket_info(movie_id);
+	
+}
 
+// displays the ticket info
+void display_ticket_info(int movie_id) {
+	char sql_string[500] = "";
+	sprintf(sql_string, "select distinct seats.customer,seats.seatnumber,movie.id,movie.name from movie join seats where movie.id = %d;", movie_id);
+	if (movie_id == -1)
+		sprintf(sql_string, "select distinct seats.customer,seats.seatnumber,movie.id,movie.name from movie join seats on movie.id = seats.movie;");
+	mysql_query(con, sql_string);
+	MYSQL_RES* result = mysql_store_result(con);
+	if (result == NULL)
+	{
+		printf("%s", mysql_error(con));
+		return;
+	}
+	MYSQL_ROW row;
+	printf("|%-15s|%-15s|%-10s|%-24s|\n\n", "CUSTOMER ID", "SEAT NUMBER", "MOVIE ID", "NAME");
+	while (row = mysql_fetch_row(result))
+	{
+		printf("|%-15s|%-15s|%-10s|%-24s|\n", row[0], row[1], row[2], row[3]);
+	}
+}
