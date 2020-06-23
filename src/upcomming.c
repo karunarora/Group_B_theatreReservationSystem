@@ -23,3 +23,41 @@ int add_upcomming_movie_input()
     add_upcomming_movie(name,date);
     return 0;
 }
+
+
+
+int display_upcommig_movie()
+{
+	mysql_query(con, "select *from upcommingmovie");
+	MYSQL_RES* result = mysql_store_result(con);
+
+	if (result == NULL)
+	{
+		printf("E%s\n\n", mysql_error(con));
+		return 0;
+	}
+
+	int num_fields = mysql_num_fields(result);
+
+	MYSQL_ROW row;
+	printf("***************************************UPCOMMING MOVIES*****************************************\n");
+	printf("|%-4s", "ID");
+	printf("|");
+	printf("%-24s", "NAME");
+	printf("|");
+	printf("%-10s", "DATE");
+	printf("|");
+	printf("\n\n");
+	while ((row = mysql_fetch_row(result)))
+	{
+		printf("|%-4s", row[0] ? row[0] : "NULL");
+		printf("|");
+		printf("%-24s", row[1] ? row[1] : "NULL");
+		printf("|");
+		printf("%-5s", row[2] ? row[2] : "NULL");
+		printf("|\n");
+	}
+	mysql_free_result(result);
+	return 1;
+    return 0;
+}
