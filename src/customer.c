@@ -1,9 +1,6 @@
 #include "../include/customer.h"
 
 
-
-
-
 // display all the customers
 int display_customers() {
 	mysql_query(con, "SELECT * FROM CUSTOMER");
@@ -48,11 +45,7 @@ int display_customers() {
 	mysql_free_result(result);
 	return 1;
 }
-
-/* This function takes the input from user for registering new customer and send details to add_customer() function
-This function is done by Paramveer singh
-*/
-
+// add customer to the list
 int add_customer_input()
 {
 	char name[50];
@@ -76,10 +69,6 @@ int add_customer_input()
 	printf("Wrong input for Gender");
 	return 0;
 }
-
-/* This function checks if the username already exists
-This function is done by Paramveer singh
-*/
 int username_exists(char *username) {
 		char sql_string[500] = "";
 		sprintf(sql_string, "select *from customer where username = '%s';", username);
@@ -98,9 +87,7 @@ int username_exists(char *username) {
 		return 0;
 }
 
-/* This function takes the input from user for updating customer's data and send details to update_customer() function
-This function is done by Harashdeep Kaur Minhas
-*/
+
 int update_customer_input()
 {
 	char name[50];
@@ -122,9 +109,7 @@ int update_customer_input()
 	return 0;
 }
 
-/* This function takes the arguements from add_customer_input() function and add new customer data to database
-This function is done by Paramveer singh
-*/
+
 
 int add_customer( char* name,char *username, char sex,char *password) {
 
@@ -146,9 +131,7 @@ int add_customer( char* name,char *username, char sex,char *password) {
 	else{printf("%s\n", "Username exists");}
 	return 0;
 }
-/* This function takes the arguements from update_customer_input() function and update customer data to database
-This function is done by Harashdeep Kaur Minhas
-*/
+
 int update_customer(int id, char* name, char sex,char *password) {
 	char sql_string[500] = "";
 	sprintf(sql_string, "update customer set name = '%s',  sex = '%c' ,password = '%s' where id = %d;", name, sex,password, id);
@@ -159,7 +142,6 @@ int update_customer(int id, char* name, char sex,char *password) {
 	}
 	return 0;
 }
-
 
 int book_movie_input()
 {
@@ -174,7 +156,6 @@ int book_movie_input()
 	book_movie(userid, movie_id, seat_num);
 	return 0;
 }
-
 
 int book_movie(int customer_id,int movie_id,int seat_number) {
 	if (seat_number < 0 || seat_number> 50)
@@ -294,6 +275,8 @@ float stof(const char* s){
   return rez * fact;
 };
 
+
+
 int seat_number(int movie_id)
 {
 	char sql_string[500] = "";
@@ -316,10 +299,52 @@ int seat_number(int movie_id)
 	return 0;
 }
 
-
 void display_current_customer()
 {
 	
+}
+
+
+// ask the user to for account info
+int add_credit_input()
+{
+	float amount;
+	char number[50];
+	char cvv[50];
+	char expdate[100];
+	
+	printf("Enter Credit To Add : ");
+	scanf("%f", &amount);
+	printf("Enter Credit Card number : ");
+	
+	scanf("%s", number);
+	//scanf("%s", number);
+	
+	
+		printf("Enter CVV : ");
+		scanf("%s", cvv);
+		if (input_date(expdate) == 0)
+		{
+			if (strlen(cvv) == 3 && strlen(number) == 16) {
+				return add_credit(userid, amount, number, cvv, expdate);
+			}
+			printf("Invalid CVV or Credit Card Number\n");
+		}
+	
+	return -1;
+}
+
+// that input and store it in the database
+int add_credit(int id, float amount,char *number,char *cvv ,char *expdate)
+{
+	char sql_string[500] = "";
+	sprintf(sql_string, "insert into creditcard value (%d,%.2f,'%s','%s','%s',now());", id, amount, number, cvv, expdate);
+	mysql_query(con, sql_string);
+	printf("Balance Updated\n");
+	sprintf(sql_string, "update customer set balance = balance + %f where id = %d;", amount, id);
+	mysql_query(con, sql_string);
+	return 0;
+
 }
 
 // display all the transaction done
@@ -417,9 +442,6 @@ int display_booked_movies(int id)
 	return 1;
 }
 
-
-
-
 // display customer on id
 int display_customer(int id)
 {
@@ -465,3 +487,5 @@ int display_customer(int id)
 	mysql_free_result(result);
 	return 0;
 }
+
+

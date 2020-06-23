@@ -18,6 +18,9 @@ int book_movie_input();
 int book_movie(int customer_id, int movie_id, int seat_number);
 int seat_number(int movie_id);
 void display_current_customer();
+int add_credit_input();
+
+int add_credit(int id, float amount,char *number ,char *cvv,char * expdate);
 int display_customer(int id);
 int display_transaction();
 int display_booked_movies(int id);

@@ -88,7 +88,7 @@ int main(int argc, char** argv)
 					}
 					else if (strcmp(option, "8") == 0)
 					{
-						//display_ticket_info_input();
+						display_ticket_info_input();
 					}
 					else if (strcmp(option, "9") == 0)
 					{
@@ -139,7 +139,7 @@ int main(int argc, char** argv)
 					}
 					else  if (strcmp(option, "4") == 0)
 					{
-						//add_credit_input();
+						add_credit_input();
 					}
 					else  if (strcmp(option, "5") == 0)
 					{
