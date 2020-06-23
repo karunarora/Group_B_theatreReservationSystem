@@ -16,6 +16,7 @@ int update_customer_input();
 int update_customer( int id, char* name, char sex, char *password);
 int book_movie_input();
 int book_movie(int customer_id, int movie_id, int seat_number);
+int seat_number(int movie_id);
 void display_current_customer();
 int display_customer(int id);
 
