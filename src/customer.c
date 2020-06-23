@@ -294,7 +294,27 @@ float stof(const char* s){
   return rez * fact;
 };
 
+int seat_number(int movie_id)
+{
+	char sql_string[500] = "";
+	sprintf(sql_string, "select distinct seatnumber from seats where movie = %d;", movie_id);
+	mysql_query(con, sql_string);
+	MYSQL_RES* result = mysql_store_result(con);
+	if (result == NULL)
+	{
+		printf("%s", mysql_error(con));
+		return 0;
+	}
 
+	MYSQL_ROW row;
+	printf("UTILIZED SEAT NUMBERS (0-50) FOR MOVIE ID %d\n",movie_id);
+	while ((row = mysql_fetch_row(result)))
+	{
+		printf("%s\n", row[0]);
+	}
+	int num_fields = mysql_num_fields(result);
+	return 0;
+}
 
 
 void display_current_customer()
