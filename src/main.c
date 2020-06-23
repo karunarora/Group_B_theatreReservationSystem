@@ -7,7 +7,7 @@
 #include "../include/admin.h"
 #include "../include/movie.h"
 #include "../include/customer.h"
-//#include "../include/upcomming.h"
+#include "../include/upcomming.h"
 
 /* Function's declaration for initializes the connection 
 This function is done by Jasvir Kaur
@@ -92,14 +92,14 @@ int main(int argc, char** argv)
 					}
 					else if (strcmp(option, "9") == 0)
 					{
-						//display_upcommig_movie();
+						display_upcommig_movie();
 					}
 					else if (strcmp(option, "10") == 0)
 					{
-						//add_upcomming_movie_input();
+						add_upcomming_movie_input();
 					}else if (strcmp(option, "11") == 0)
 					{
-						//display_transaction();
+						display_transaction();
 					}
 					else if (strcmp(option, "o") == 0)
 					{
@@ -143,11 +143,11 @@ int main(int argc, char** argv)
 					}
 					else  if (strcmp(option, "5") == 0)
 					{
-						//display_upcommig_movie();
+						display_upcommig_movie();
 					}
 					else  if (strcmp(option, "6") == 0)
 					{
-						//display_booked_movies(userid);
+						display_booked_movies(userid);
 					}
 					else if (strcmp(option, "o") == 0)
 					{

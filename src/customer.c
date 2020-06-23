@@ -322,6 +322,100 @@ void display_current_customer()
 	
 }
 
+// display all the transaction done
+int display_transaction()
+{
+	char buf[100];
+	sprintf(buf, "SELECT * FROM creditcard");
+	mysql_query(con, buf);
+	MYSQL_RES* result = mysql_store_result(con);
+
+	if (result == NULL)
+	{
+		printf("%s", mysql_error(con));
+		return 0;
+	}
+
+	int num_fields = mysql_num_fields(result);
+
+	MYSQL_ROW row;
+	printf("|%-4s", "ID");
+	printf("|");
+	printf("%-10s", "AMOUNT");
+	printf("|");
+	printf("%-20s", "Number");
+	printf("|");
+	printf("%-12s", "EXP DATE");
+	printf("|");
+	printf("%-12s", "TRANS DATE");
+	printf("|");
+	printf("\n\n");
+
+	while ((row = mysql_fetch_row(result)))
+	{
+		printf("|%-4s", row[0] ? row[0] : "NULL");
+		printf("|");
+		printf("%-10s", row[1] ? row[1] : "NULL");
+		printf("|");
+		printf("%-20s", row[2] ? row[2] : "NULL");
+		printf("|");
+		printf("%-12s", row[4] ? row[4] : "NULL");
+		printf("|");
+		printf("%-12s", row[5] ? row[5] : "NULL");
+		printf("|\n");
+	}
+	mysql_free_result(result);
+	return 0;
+}
+
+// displays booked movie info 
+int display_booked_movies(int id)
+{
+	char buf[1000];
+	sprintf(buf,"select movie.*,seats.seatNumber  from movie join seats on movie.id = seats.movie where seats.customer = %d;", id);
+	mysql_query(con, buf);
+	MYSQL_RES* result = mysql_store_result(con);
+	if (result == NULL)
+	{
+		printf("E%s\n\n", mysql_error(con));
+		return 0;
+	}
+	int num_fields = mysql_num_fields(result);
+	MYSQL_ROW row;
+	printf("|%-4s", "ID");
+	printf("|");
+	printf("%-24s", "NAME");
+	printf("|");
+	printf("%-10s", "TYPE");
+	printf("|");
+	printf("%-10s", "DATE");
+	printf("|");
+	printf("%-10s", "TIME");
+	printf("|");
+	printf("%-5s", "PRICE");
+	printf("|");
+	printf("%-10s|", "SEAT NO");
+	printf("\n\n");
+	while ((row = mysql_fetch_row(result)))
+	{
+		printf("|%-4s", row[0] ? row[0] : "NULL");
+		printf("|");
+		printf("%-24s", row[1] ? row[1] : "NULL");
+		printf("|");
+		printf("%-10s", row[2] ? row[2] : "NULL");
+		printf("|");
+		printf("%-10s", row[3] ? row[3] : "NULL");
+		printf("|");
+		printf("%-10s", row[4] ? row[4] : "NULL");
+		printf("|");
+		printf("%-5s", row[5] ? row[5] : "NULL");
+		printf("|");
+		printf("%-10s", row[6] ? row[6] : "NULL");
+		printf("|\n");
+	}
+	mysql_free_result(result);
+	return 1;
+}
 
 
 

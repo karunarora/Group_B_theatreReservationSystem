@@ -36,7 +36,7 @@ theatre_reservation_system:
 	
 	$(CC) -g -O -c $(SRCDIR)/movie.c -fPIC -DPIC -o $(OBJDIR)/movie.o
 
-#	$(CC) -g -O -c $(SRCDIR)/upcomming.c -fPIC -DPIC -o $(OBJDIR)/upcomming.o
+	$(CC) -g -O -c $(SRCDIR)/upcomming.c -fPIC -DPIC -o $(OBJDIR)/upcomming.o
 	
 #	$(CC) -g -O -c $(SRCTESTDIR)/test.c -fPIC -DPIC -o $(OBJDIR)/objtest/test.o
 	
@@ -44,7 +44,7 @@ theatre_reservation_system:
 	
 #	$(CC) -o $(BINDIR)/$(TARGET) $(OBJDIR)/*.o libmysql.dll
 	
-	$(CC) -o bin/theatre_reservation_system $(OBJDIR)/main.o $(OBJDIR)/login.o $(OBJDIR)/admin.o $(OBJDIR)/customer.o $(OBJDIR)/movie.o libmysql.dll
+	$(CC) -o bin/theatre_reservation_system $(OBJDIR)/main.o $(OBJDIR)/login.o $(OBJDIR)/admin.o $(OBJDIR)/customer.o $(OBJDIR)/movie.o $(OBJDIR)/upcomming.o libmysql.dll
 	
 
 

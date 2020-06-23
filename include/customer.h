@@ -19,7 +19,8 @@ int book_movie(int customer_id, int movie_id, int seat_number);
 int seat_number(int movie_id);
 void display_current_customer();
 int display_customer(int id);
-
+int display_transaction();
+int display_booked_movies(int id);
 float stof(const char* s);
 
 #endif // !struct_object
