@@ -5,7 +5,7 @@
 #include <mysql.h>
 #include <stdio.h>
 //#include <conio.h>
-#include "setup.h"
+#include "../include/setup.h"
 
 
 int input_date(char *tempBuffer);
