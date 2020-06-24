@@ -1,0 +1,5 @@
+<map id="add_upcomming_movie_input" name="add_upcomming_movie_input">
+<area shape="rect" id="node1" title="This function takes input values for add_upcoming_movie()" alt="" coords="5,23,163,65"/>
+<area shape="rect" id="node2" href="$upcomming_8c.html#a388b9dcb729e03a7ebc52cc378cc7c4f" title="A function to take arguments by the admin to add the upcoming movies in the system." alt="" coords="211,5,368,32"/>
+<area shape="rect" id="node3" href="$movie_8c.html#af9daea4648bf4da5692547d11243edea" title="A function to input the date of movie from the customer." alt="" coords="248,56,331,83"/>
+</map>

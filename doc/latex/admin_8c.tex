@@ -1,0 +1,187 @@
+\hypertarget{admin_8c}{}\doxysection{admin.\+c File Reference}
+\label{admin_8c}\index{admin.c@{admin.c}}
+
+
+all admin functionalities of system will be handled, in this file.  
+
+
+{\ttfamily \#include \char`\"{}../include/admin.\+h\char`\"{}}\newline
+Include dependency graph for admin.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{admin_8c_a01dbb2ec022d12684b861396f5a873fb}{display\+\_\+selling}} (char $\ast$date)
+\begin{DoxyCompactList}\small\item\em This function is used to display total number of movie tickets sold on that paricular date. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{admin_8c_a4f38f2304385ff78ce12d048f25b6ffc}{total\+\_\+earning}} (char $\ast$date)
+\begin{DoxyCompactList}\small\item\em This function is used to display total income from movie tickets sold on that paricular date. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{admin_8c_a918ab06bc79e438ad8deaa43d8c05ae5}{stod}} (const char $\ast$s)
+\begin{DoxyCompactList}\small\item\em This function is used for conversion of string variable to double. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{admin_8c_aaf2545a9dd2a2bb04e92089978e6b2c8}{display\+\_\+ticket\+\_\+info\+\_\+input}} ()
+\begin{DoxyCompactList}\small\item\em Wrapper function is being used. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{admin_8c_a4d44da9fabe1b3a6f2d755290278d023}{display\+\_\+ticket\+\_\+info}} (int movie\+\_\+id)
+\begin{DoxyCompactList}\small\item\em This function is used to display ticket information and details. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+all admin functionalities of system will be handled, in this file. 
+
+\begin{DoxyAuthor}{Author}
+Jasvir Kaur -\/ \href{mailto:jasvirkaur@cmail.carleton.ca}{\texttt{ jasvirkaur@cmail.\+carleton.\+ca}} 
+
+Karun Arora -\/ \href{mailto:karunarora@cmail.carleton.ca}{\texttt{ karunarora@cmail.\+carleton.\+ca}} 
+
+Harashdeep Kaur Minhas -\/ \href{mailto:harashdeepkaurminhas@cmail.carleton.ca}{\texttt{ harashdeepkaurminhas@cmail.\+carleton.\+ca}} 
+
+Paramveer Singh -\/ \href{mailto:paramveersingh3@cmail.carleton.ca}{\texttt{ paramveersingh3@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{admin_8c_a01dbb2ec022d12684b861396f5a873fb}\label{admin_8c_a01dbb2ec022d12684b861396f5a873fb}} 
+\index{admin.c@{admin.c}!display\_selling@{display\_selling}}
+\index{display\_selling@{display\_selling}!admin.c@{admin.c}}
+\doxysubsubsection{\texorpdfstring{display\_selling()}{display\_selling()}}
+{\footnotesize\ttfamily int display\+\_\+selling (\begin{DoxyParamCaption}\item[{char $\ast$}]{date }\end{DoxyParamCaption})}
+
+
+
+This function is used to display total number of movie tickets sold on that paricular date. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em date} & -\/ This is of char type and is used to enter date.\\
+\hline
+\end{DoxyParams}
+@description With help of date parameter listed above, it displays total number of tickets sold on particular date.
+
+\begin{DoxyReturn}{Returns}
+int type value for functuion. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{admin_8c_a01dbb2ec022d12684b861396f5a873fb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{admin_8c_a4d44da9fabe1b3a6f2d755290278d023}\label{admin_8c_a4d44da9fabe1b3a6f2d755290278d023}} 
+\index{admin.c@{admin.c}!display\_ticket\_info@{display\_ticket\_info}}
+\index{display\_ticket\_info@{display\_ticket\_info}!admin.c@{admin.c}}
+\doxysubsubsection{\texorpdfstring{display\_ticket\_info()}{display\_ticket\_info()}}
+{\footnotesize\ttfamily int display\+\_\+ticket\+\_\+info (\begin{DoxyParamCaption}\item[{int}]{movie\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+This function is used to display ticket information and details. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em movie\+\_\+id} & -\/ This is of int type and this parameter gives away particular id to movie.\\
+\hline
+\end{DoxyParams}
+@description By using above listed parameter, this function is used to display ticket information such as customer id, movie name and id, seat number.
+
+\begin{DoxyReturn}{Returns}
+integer type value. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin_8c_a4d44da9fabe1b3a6f2d755290278d023_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{admin_8c_aaf2545a9dd2a2bb04e92089978e6b2c8}\label{admin_8c_aaf2545a9dd2a2bb04e92089978e6b2c8}} 
+\index{admin.c@{admin.c}!display\_ticket\_info\_input@{display\_ticket\_info\_input}}
+\index{display\_ticket\_info\_input@{display\_ticket\_info\_input}!admin.c@{admin.c}}
+\doxysubsubsection{\texorpdfstring{display\_ticket\_info\_input()}{display\_ticket\_info\_input()}}
+{\footnotesize\ttfamily void display\+\_\+ticket\+\_\+info\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wrapper function is being used. 
+
+@description In this function wrapper function is used for printing ticket information.
+
+\begin{DoxyReturn}{Returns}
+Return value for this function is void. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{admin_8c_aaf2545a9dd2a2bb04e92089978e6b2c8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{admin_8c_aaf2545a9dd2a2bb04e92089978e6b2c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{admin_8c_a918ab06bc79e438ad8deaa43d8c05ae5}\label{admin_8c_a918ab06bc79e438ad8deaa43d8c05ae5}} 
+\index{admin.c@{admin.c}!stod@{stod}}
+\index{stod@{stod}!admin.c@{admin.c}}
+\doxysubsubsection{\texorpdfstring{stod()}{stod()}}
+{\footnotesize\ttfamily double stod (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+This function is used for conversion of string variable to double. 
+
+@description With help of this function string type variable is converted to double. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{admin_8c_a918ab06bc79e438ad8deaa43d8c05ae5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{admin_8c_a4f38f2304385ff78ce12d048f25b6ffc}\label{admin_8c_a4f38f2304385ff78ce12d048f25b6ffc}} 
+\index{admin.c@{admin.c}!total\_earning@{total\_earning}}
+\index{total\_earning@{total\_earning}!admin.c@{admin.c}}
+\doxysubsubsection{\texorpdfstring{total\_earning()}{total\_earning()}}
+{\footnotesize\ttfamily int total\+\_\+earning (\begin{DoxyParamCaption}\item[{char $\ast$}]{date }\end{DoxyParamCaption})}
+
+
+
+This function is used to display total income from movie tickets sold on that paricular date. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em date} & -\/ This is of char type and is used to enter date.\\
+\hline
+\end{DoxyParams}
+@description With help of date parameter listed above, it displays total income earned by selling movie tickets on that particular date.
+
+\begin{DoxyReturn}{Returns}
+int type value for function. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{admin_8c_a4f38f2304385ff78ce12d048f25b6ffc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{admin_8c_a4f38f2304385ff78ce12d048f25b6ffc_icgraph}
+\end{center}
+\end{figure}

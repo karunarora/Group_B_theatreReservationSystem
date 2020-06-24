@@ -1,0 +1,41 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,588,56,615"/>
+<area shape="rect" id="node2" href="$customer_8c.html#a20b60bd9c40c2ace00b94876c51c99d6" title="This function takes input value for add_credit function." alt="" coords="131,40,248,67"/>
+<area shape="rect" id="node4" href="$movie_8c.html#af9daea4648bf4da5692547d11243edea" title="A function to input the date of movie from the customer." alt="" coords="360,107,443,133"/>
+<area shape="rect" id="node5" href="$customer_8c.html#ac89066b4e1a28986488e592dddfac502" title="This function takes input value for add_customer_input()" alt="" coords="120,360,259,387"/>
+<area shape="rect" id="node8" href="$movie_8c.html#a12fbbdaa9b5c875044c209ea29d61e31" title="This function takes input values for add_movie() function." alt="" coords="130,91,249,117"/>
+<area shape="rect" id="node10" href="$upcomming_8c.html#a4689a97933b1633a2314b720d62fe669" title="This function takes input values for add_upcoming_movie()" alt="" coords="111,193,268,234"/>
+<area shape="rect" id="node12" href="$login_8c.html#ab1988ff1b0308d39bbed69c595388841" title="This function takes input values for admin_login()" alt="" coords="126,411,253,437"/>
+<area shape="rect" id="node14" href="$customer_8c.html#ad27dd5ffc9729a7d6a573b378d06efdd" title="This function takes input value for book_movie." alt="" coords="127,461,252,488"/>
+<area shape="rect" id="node18" href="$login_8c.html#a7b5ce0b7f545ec2efd282da83f27879e" title="This function takes input value for customer_login()" alt="" coords="117,512,262,539"/>
+<area shape="rect" id="node20" href="$customer_8c.html#adf0117179c38cbd14569ea71ae851c09" title="This function displays movies that has been booked." alt="" coords="110,563,269,589"/>
+<area shape="rect" id="node21" href="$customer_8c.html#abe0245af5a8d8227d23cabadbb394a31" title="This function takes customer id as input and will print the details of the customer." alt="" coords="127,613,251,640"/>
+<area shape="rect" id="node22" href="$customer_8c.html#a0701c30e3db75625f7186d7b9b2d8e0c" title="This function display all customers." alt="" coords="124,664,255,691"/>
+<area shape="rect" id="node23" href="$movie_8c.html#a12486a271ed60ad17da761d05e39797c" title="This function takes no input value and will print list of all movies that are showcased in theatre." alt="" coords="138,715,241,741"/>
+<area shape="rect" id="node24" href="$admin_8c.html#a01dbb2ec022d12684b861396f5a873fb" title="This function is used to display total number of movie tickets sold on that paricular date." alt="" coords="136,765,243,792"/>
+<area shape="rect" id="node25" href="$admin_8c.html#aaf2545a9dd2a2bb04e92089978e6b2c8" title="Wrapper function is being used." alt="" coords="125,817,254,858"/>
+<area shape="rect" id="node27" href="$customer_8c.html#ae95a5385f2ac18b80e64e9c199201fc6" title="This function is of int type and used to display tansactions to customers." alt="" coords="122,883,257,909"/>
+<area shape="rect" id="node28" href="$upcomming_8c.html#ac261de0a7d33b31885b2aa5af7f15b5e" title=" " alt="" coords="104,933,275,960"/>
+<area shape="rect" id="node29" href="$main_8c.html#a91b5ac752955a001b91b259a51bd92ac" title=" " alt="" coords="150,984,229,1011"/>
+<area shape="rect" id="node30" href="$login_8c.html#ad28b5a40354ea95099c4a194b3210451" title="This function logsout the customer and admin out of the system." alt="" coords="161,1035,218,1061"/>
+<area shape="rect" id="node31" href="$movie_8c.html#aaf9068514eb9df27c977a5ad28f59aa2" title="This function takes input values for remove_movie() function." alt="" coords="120,309,259,336"/>
+<area shape="rect" id="node34" href="$admin_8c.html#a4f38f2304385ff78ce12d048f25b6ffc" title="This function is used to display total income from movie tickets sold on that paricular date." alt="" coords="141,1085,237,1112"/>
+<area shape="rect" id="node36" href="$customer_8c.html#ad25e4a5965bc5b297e50f339dc3ad435" title=" " alt="" coords="111,1136,268,1163"/>
+<area shape="rect" id="node38" href="$movie_8c.html#a0e64bda15bc99082d986a56d262302ba" title="This function takes input values for update_movie() function." alt="" coords="121,259,257,285"/>
+<area shape="rect" id="node3" href="$customer_8c.html#aaf18f7b019aa83cb18dd614e3b5e603e" title="This function is used to add credit to customers account balance." alt="" coords="360,5,443,32"/>
+<area shape="rect" id="node6" href="$customer_8c.html#a4e69e2e2c82becd06a41a1e2ee78f4b7" title="This function takes name, balance, sex, password as its input parameters for signing up new customer." alt="" coords="349,360,453,387"/>
+<area shape="rect" id="node7" href="$customer_8c.html#a3a2bbe6769f08404e24505d935ca6c99" title=" " alt="" coords="528,360,649,387"/>
+<area shape="rect" id="node9" href="$movie_8c.html#a7460629ee0b541dff33732f01154cbde" title=" " alt="" coords="360,56,443,83"/>
+<area shape="rect" id="node11" href="$upcomming_8c.html#a388b9dcb729e03a7ebc52cc378cc7c4f" title="A function to take arguments by the admin to add the upcoming movies in the system." alt="" coords="323,157,480,184"/>
+<area shape="rect" id="node13" href="$login_8c.html#a07ddad5a79dcade8619198d370ea20eb" title="A function to take arguments from the admin to login to the system and verify credentials from the da..." alt="" coords="356,411,447,437"/>
+<area shape="rect" id="node15" href="$customer_8c.html#ac77432eff57ba1d67b4c6516eaf75bfb" title="A function to book movie." alt="" coords="356,461,447,488"/>
+<area shape="rect" id="node16" href="$customer_8c.html#a644866c079eb5e08896dc2f2776a4049" title="This function is used to check seats booked." alt="" coords="540,512,637,539"/>
+<area shape="rect" id="node17" href="$customer_8c.html#a9fb8c6ac338320c6c99d4ac926443fa8" title=" " alt="" coords="567,461,610,488"/>
+<area shape="rect" id="node19" href="$login_8c.html#a6b10b92f8741b5eac542b76064f216a1" title="This function takes arguements from customer input function and verify credentials from db." alt="" coords="346,563,457,589"/>
+<area shape="rect" id="node26" href="$admin_8c.html#a4d44da9fabe1b3a6f2d755290278d023" title="This function is used to display ticket information and details." alt="" coords="337,824,466,851"/>
+<area shape="rect" id="node32" href="$movie_8c.html#aa2fdc99b2d400b319eaf77cd20000973" title="This function checks whether movie exists or not." alt="" coords="353,259,450,285"/>
+<area shape="rect" id="node33" href="$movie_8c.html#a001bd6ad1cda62c44ecbf81743eb04d4" title="This function is used to remove movie from system." alt="" coords="350,309,453,336"/>
+<area shape="rect" id="node35" href="$admin_8c.html#a918ab06bc79e438ad8deaa43d8c05ae5" title="This function is used for conversion of string variable to double." alt="" coords="378,1085,425,1112"/>
+<area shape="rect" id="node37" href="$customer_8c.html#a9c9b8698707864182d77df26bc0286eb" title="A function to update the personal data (name, login, password, gender) of a customer in Database who ..." alt="" coords="340,1136,463,1163"/>
+<area shape="rect" id="node39" href="$movie_8c.html#a95831b2679c0823ba4e57e17348d6bb4" title="This function is used to update particular movie information and details." alt="" coords="351,208,452,235"/>
+</map>

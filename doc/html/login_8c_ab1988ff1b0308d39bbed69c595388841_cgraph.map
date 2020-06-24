@@ -1,0 +1,4 @@
+<map id="admin_login_input" name="admin_login_input">
+<area shape="rect" id="node1" title="This function takes input values for admin_login()" alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$login_8c.html#a07ddad5a79dcade8619198d370ea20eb" title="A function to take arguments from the admin to login to the system and verify credentials from the da..." alt="" coords="180,5,271,32"/>
+</map>
