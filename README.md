@@ -12,76 +12,75 @@ System will automatically generate tickets with unique id and user can use the t
 * Paramveer Singh - paramveersingh3@cmail.carleton.ca
 
 # Installation
-Intallation steps can be found in this document [user_manual.docx]
-(https://github.com/karunarora/Group_B_theatreReservationSystem/tree/development/doc/user_manual.docx)
+This document contains the installation steps [user_manual.docx](https://github.com/karunarora/Group_B_theatreReservationSystem/tree/development/doc/user_manual.docx)
 
 # Usage
 
-To run, you must first install it. Then you can follow instructions mentioned in
+To run the project, it should be installed first. Then just follow the instructions mentioned in
 [user_manual.docx](https://github.com/karunarora/Group_B_theatreReservationSystem/tree/development/doc/user_manual.docx)
 
 
 # File Strucutre
 1.	bin: This folder has executable and data file for the project.
-a)	theatre_reservation_system.exe
-b)	Test.exe
+*	theatre_reservation_system.exe
+*	Test.exe
 
 2. database: This folder contains the database file.
-a) Theatre_reservation_system.sql
+* Theatre_reservation_system.sql
 
 3.	Doc: It contains all the documents for the project.
-a)	developer_guide.docx
-b)  user_manual.docx
-c)  html/
-d)  latex/
+*  developer_guide.docx
+*  user_manual.docx
+*  html/
+*  latex/
 
 4. external_files: It contains all the external header files used in this project.
-a) my_alloc.h
-b) my_list.h
-c) mysql.h
-d) mysql_com.h
-e) mysql_time.h
-f) mysql_version.h
-g) typelib.h
+* my_alloc.h
+* my_list.h
+* mysql.h
+* mysql_com.h
+* mysql_time.h
+* mysql_version.h
+* typelib.h
 
 5.	Include: It contains all the header files included in the project.
-a)	admin.h
-b)	customer.h
-c)	login.h
-d)	movie.h
-e)	setup.h
-f)	upcomming.h
+*	admin.h
+*	customer.h
+*	login.h
+*	movie.h
+*	setup.h
+*	upcomming.h
 
 6.	lib: It has following dll files:
-a)	libmysql.dll
+*	libmysql.dll
 
 
 7.	obj: This folder has all the object files generated using make file. 
-a)	testobj/Test.o
-b)	admin.o
-c)	customer.o
-d)	login.o
-e)	movie.o
-f)	main.o
-g)	upcomming.o
+*	testobj/Test.o
+*	admin.o
+*	customer.o
+*	login.o
+*	movie.o
+*	main.o
+*	upcomming.o
 
 
 8.	Src: It has following .c files:
-a)	admin.c
-b)	customer.c
-c)	login.c
-d)	movie.c
-e)	main.c
-f)	upcomming.c
+*	admin.c
+*	customer.c
+*	login.c
+*	movie.c
+*	main.c
+*	upcomming.c
 
 7.	test: It has following files :
-a) Test.c
-b) testresults.txt
+* Test.c
+* testresults.txt
 
 
 # For Developers
 
-The developer manual is available [here](https://github.com/karunarora/Group_B_theatreReservationSystem/tree/development/doc/developer_guide.docx)
+The developer manual is available [here](https://github.com/karunarora/Group_B_theatreReservationSystem/blob/development/doc/developer_guide.docx)
 
 
 # License
