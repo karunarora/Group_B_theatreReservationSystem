@@ -1,0 +1,5 @@
+<map id="customer_login" name="customer_login">
+<area shape="rect" id="node1" title="This function takes arguements from customer input function and verify credentials from db." alt="" coords="297,5,408,32"/>
+<area shape="rect" id="node2" href="$login_8c.html#a7b5ce0b7f545ec2efd282da83f27879e" title="This function takes input value for customer_login()" alt="" coords="104,5,249,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>

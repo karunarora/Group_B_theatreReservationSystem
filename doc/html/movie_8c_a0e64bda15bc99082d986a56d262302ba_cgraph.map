@@ -1,0 +1,6 @@
+<map id="update_movie_input" name="update_movie_input">
+<area shape="rect" id="node1" title="This function takes input values for update_movie() function." alt="" coords="5,56,141,83"/>
+<area shape="rect" id="node2" href="$movie_8c.html#af9daea4648bf4da5692547d11243edea" title="A function to input the date of movie from the customer." alt="" coords="199,5,281,32"/>
+<area shape="rect" id="node3" href="$movie_8c.html#aa2fdc99b2d400b319eaf77cd20000973" title="This function checks whether movie exists or not." alt="" coords="191,56,289,83"/>
+<area shape="rect" id="node4" href="$movie_8c.html#a95831b2679c0823ba4e57e17348d6bb4" title="This function is used to update particular movie information and details." alt="" coords="189,107,291,133"/>
+</map>

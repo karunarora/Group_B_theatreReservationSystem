@@ -15,8 +15,8 @@
 #include <mysql.h>
 #include <stdio.h>
 //#include <conio.h>
-#include "setup.h"
-#include "movie.h"
+#include "../include/setup.h"
+#include "../include/movie.h"
 
 /**
  * @brief This function is used to display total number of movie tickets sold on that paricular date.
@@ -61,10 +61,10 @@ void display_ticket_info_input();
  *
  * @description By using above listed parameter, this function is used to display ticket information such as customer id, movie name and id, seat number. 
  * 
- * @return int type value for functuion.
+ * @return integer type value.
  *
  */
-void display_ticket_info(int movie_id);
+int display_ticket_info(int movie_id);
 
 
 /**

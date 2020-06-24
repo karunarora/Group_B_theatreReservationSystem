@@ -1,0 +1,8 @@
+<map id="input_date" name="input_date">
+<area shape="rect" id="node1" title="A function to input the date of movie from the customer." alt="" coords="309,107,392,133"/>
+<area shape="rect" id="node2" href="$customer_8c.html#a20b60bd9c40c2ace00b94876c51c99d6" title="This function takes input value for add_credit function." alt="" coords="124,5,241,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,107,56,133"/>
+<area shape="rect" id="node4" href="$movie_8c.html#a12fbbdaa9b5c875044c209ea29d61e31" title="This function takes input values for add_movie() function." alt="" coords="123,107,242,133"/>
+<area shape="rect" id="node5" href="$upcomming_8c.html#a4689a97933b1633a2314b720d62fe669" title="This function takes input values for add_upcoming_movie()" alt="" coords="104,158,261,199"/>
+<area shape="rect" id="node6" href="$movie_8c.html#a0e64bda15bc99082d986a56d262302ba" title="This function takes input values for update_movie() function." alt="" coords="115,224,251,251"/>
+</map>

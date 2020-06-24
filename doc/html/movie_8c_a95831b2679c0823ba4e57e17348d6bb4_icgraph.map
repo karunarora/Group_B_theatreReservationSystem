@@ -1,0 +1,5 @@
+<map id="update_movie" name="update_movie">
+<area shape="rect" id="node1" title="This function is used to update particular movie information and details." alt="" coords="288,5,389,32"/>
+<area shape="rect" id="node2" href="$movie_8c.html#a0e64bda15bc99082d986a56d262302ba" title="This function takes input values for update_movie() function." alt="" coords="104,5,240,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>

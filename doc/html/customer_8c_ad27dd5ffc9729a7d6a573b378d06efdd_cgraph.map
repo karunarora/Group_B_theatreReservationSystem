@@ -1,0 +1,6 @@
+<map id="book_movie_input" name="book_movie_input">
+<area shape="rect" id="node1" title="This function takes input value for book_movie." alt="" coords="5,31,131,57"/>
+<area shape="rect" id="node2" href="$customer_8c.html#ac77432eff57ba1d67b4c6516eaf75bfb" title="A function to book movie." alt="" coords="179,56,269,83"/>
+<area shape="rect" id="node3" href="$customer_8c.html#a644866c079eb5e08896dc2f2776a4049" title="This function is used to check seats booked." alt="" coords="317,5,415,32"/>
+<area shape="rect" id="node4" href="$customer_8c.html#a9fb8c6ac338320c6c99d4ac926443fa8" title=" " alt="" coords="345,56,387,83"/>
+</map>

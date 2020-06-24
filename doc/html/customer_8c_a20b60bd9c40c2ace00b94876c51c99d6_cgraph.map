@@ -1,0 +1,5 @@
+<map id="add_credit_input" name="add_credit_input">
+<area shape="rect" id="node1" title="This function takes input value for add_credit function." alt="" coords="5,31,123,57"/>
+<area shape="rect" id="node2" href="$customer_8c.html#aaf18f7b019aa83cb18dd614e3b5e603e" title="This function is used to add credit to customers account balance." alt="" coords="171,5,253,32"/>
+<area shape="rect" id="node3" href="$movie_8c.html#af9daea4648bf4da5692547d11243edea" title="A function to input the date of movie from the customer." alt="" coords="171,56,253,83"/>
+</map>

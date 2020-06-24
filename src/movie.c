@@ -1,10 +1,25 @@
+/**
+ * @file.movie.h
+ *
+ * @brief all the functionalities related with addidtion, updation, remove of movies by customer and admin. 
+ *
+ * @author Jasvir Kaur - jasvirkaur@cmail.carleton.ca
+ * @author Karun Arora - karunarora@cmail.carleton.ca
+ * @author Harashdeep Kaur Minhas - harashdeepkaurminhas@cmail.carleton.ca
+ * @author Paramveer Singh - paramveersingh3@cmail.carleton.ca
+ */
 #include "../include/movie.h"
 #include "../include/upcomming.h"
 
-
-
-/*This function takes input for the date and pass it to several function.
-This function is done by Harashdeep kaur minhas
+/**
+* @fn int input_date(char *tempBuffer);
+* @brief A function to input the date of movie from the customer.
+*
+* @param[in] char *tempbuffer---This parameter gives the date and store it.
+*
+*@description of function A function will be called when CUSTOMER wants to enter the date which will be saved in tempbuffer.
+*@return It will return value of int type.
+*
 */
 int input_date(char* tempBuffer)
 {
@@ -31,7 +46,16 @@ int input_date(char* tempBuffer)
 	return 1;
 }
 
-// checks if movie exists
+/**
+ * @brief This function checks whether movie exists or not.
+ *
+ * @param[in] movie_id - This is of int type and this parameter takes particular movie id.
+ *
+ * @description This function uses above listed parameters displays the movies that movie with that particular id exists or not. 
+ * 
+ * @return returns int type value for this functuion.
+ *
+ */
 int movie_exists(int movie_id)
 {
 	char sql_string[500] = "";
@@ -51,9 +75,14 @@ int movie_exists(int movie_id)
 	return 0;
 }
 
-
-/*This function takes input from the user and pass the arguements into the add_movie() function.
-This function is done by Karun Arora
+/**
+*
+* @brief This function takes input values for add_movie() function.
+*
+*  This function takes no parameter
+*
+* @return It returns int type value.
+*
 */
 int add_movie_input()
 {
@@ -83,8 +112,14 @@ int add_movie_input()
 	return 0;
 }
 
-/*This function takes input from the user and pass the arguements into the update_movie() function.
-This function is done by Karun Arora
+/**
+*
+* @brief This function takes input values for update_movie() function.
+*
+*  This function takes no parameter
+*
+* @return It returns int type value.
+*
 */
 int update_movie_input()
 {
@@ -121,8 +156,14 @@ int update_movie_input()
 	return 0;
 }
 
-/* This function takes input from user and pass it to remove_movie() function
-This function is done by Karun Arora
+/**
+*
+* @brief This function takes input values for remove_movie() function.
+*
+*  This function takes no parameter
+*
+* @return It returns int type value.
+*
 */
 int remove_movie_input()
 {
@@ -137,56 +178,36 @@ int remove_movie_input()
 	return 0;
 }
 
-/* This function takes the arguements from the add_movie_input function add the movie details into the database.
-This function is done by Karun Arora
+/**
+*
+*\fn int add_movie()
+*\brief This function takes input value from add_movie_input function and add ovie into database
+*@param[in] char* movie_name
+*@param[in] char *  type
+*@param[in] char* movie_date
+*@param[in] char* movie_time
+*@param[in] float movie_price
+*\return It returns 1 for error and 0 for succesfully displaying movies
+*
 */
-
 int add_movie(char* movie_name, char *  type,char* movie_date, char* movie_time, float movie_price) {
 	char sql_string[500] = "";
 	sprintf(sql_string, "insert into movie(name,type, movie_date, movie_time,movie_price) value ('%s','%s','%s','%s',%.2f);", movie_name,type, movie_date, movie_time, movie_price);
 
 	if (mysql_query(con, sql_string)) {
 		printf("%s\n", mysql_error(con));
-		return 0;
+		return 1;
 	}
 	return 0;
 }
 
-
-/* This function takes arguements from the removie movie input function and make changes into database by removing movie of entered movie id
-This function is done by Karun Arora
-*/
-int remove_movie(int id)
-{
-	char sql_string[500] = "";
-	sprintf(sql_string, "delete from movie where id = %d", id);
-
-	if (mysql_query(con, sql_string)) {
-		printf("%s\n", mysql_error(con));
-		return 0;
-	}
-	return 0;
-}
-
-/* This function takes the arguements form the update_movie_input function update the movie details into the database.
-This function is done by Karun Arora
-*/
-
-int update_movie(int id, char* movie_name,char *type ,char* movie_date, char* movie_time, float movie_price)
-{
-	char sql_string[500] = "";
-	sprintf(sql_string, "update movie set name = '%s',type='%s',movie_date ='%s',movie_time='%s',movie_price=%.2f where id = %d;", movie_name,type, movie_date, movie_time, movie_price, id);
-
-	if (mysql_query(con, sql_string)) {
-		printf("%s\n", mysql_error(con));
-		return 0;
-	}
-	return 0;
-}
-
-
-/* This function display all movie listing
-This function is done by Paramveer singh
+/**
+*
+*\fn int display_movie()
+*\brief This function takes no input value and will print list of all movies that are showcased in theatre
+*
+*\return It returns 0 for error and 1 for succesfully displaying movies
+*
 */
 int display_movie() {
 	mysql_query(con, "select *from movie");
@@ -195,7 +216,7 @@ int display_movie() {
 	if (result == NULL)
 	{
 		printf("E%s\n\n", mysql_error(con));
-		return 0;
+		return 1;
 	}
 
 	int num_fields = mysql_num_fields(result);
@@ -230,5 +251,54 @@ int display_movie() {
 		printf("|\n");
 	}
 	mysql_free_result(result);
-	return 1;
+	return 0;
+}
+
+/**
+ * @brief This function is used to remove movie from system.
+ *
+ * @param[in] id - This is of int type and this parameter takes particular movie id.
+ *
+ * @description This function uses above listed parameters to remove that movie with particular id from system. 
+ * 
+ * @return returns int type value for this functuion.
+ *
+ */
+int remove_movie(int id)
+{
+	char sql_string[500] = "";
+	sprintf(sql_string, "delete from movie where id = %d", id);
+
+	if (mysql_query(con, sql_string)) {
+		printf("%s\n", mysql_error(con));
+		return 1;
+	}
+	return 0;
+}
+
+/**
+*
+*@brief This function is used to update particular movie information and details.
+*
+*@param[in] int id - takes in movie id.
+*@param[in] char movie_name - takes in name of that particular movie.
+*@param[in] char type - takes in type or genre of movie.
+*@param[in] char movie_time - takes in show timings for movie. 
+*@param[in] float movie_price - takes in price for movie show.
+*
+*@description- using all the parameters listed above, this function is used to update movie deatails.
+*
+*@return returns int value for this function.
+*
+*/
+int update_movie(int id, char* movie_name,char *type ,char* movie_date, char* movie_time, float movie_price)
+{
+	char sql_string[500] = "";
+	sprintf(sql_string, "update movie set name = '%s',type='%s',movie_date ='%s',movie_time='%s',movie_price=%.2f where id = %d;", movie_name,type, movie_date, movie_time, movie_price, id);
+
+	if (mysql_query(con, sql_string)) {
+		printf("%s\n", mysql_error(con));
+		return 1;
+	}
+	return 0;
 }

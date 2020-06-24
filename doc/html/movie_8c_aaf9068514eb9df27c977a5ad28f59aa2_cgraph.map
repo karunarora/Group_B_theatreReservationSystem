@@ -1,0 +1,5 @@
+<map id="remove_movie_input" name="remove_movie_input">
+<area shape="rect" id="node1" title="This function takes input values for remove_movie() function." alt="" coords="5,31,144,57"/>
+<area shape="rect" id="node2" href="$movie_8c.html#aa2fdc99b2d400b319eaf77cd20000973" title="This function checks whether movie exists or not." alt="" coords="195,5,292,32"/>
+<area shape="rect" id="node3" href="$movie_8c.html#a001bd6ad1cda62c44ecbf81743eb04d4" title="This function is used to remove movie from system." alt="" coords="192,56,295,83"/>
+</map>

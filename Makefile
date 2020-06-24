@@ -38,19 +38,19 @@ theatre_reservation_system:
 
 	$(CC) -g -O -c $(SRCDIR)/upcomming.c -fPIC -DPIC -o $(OBJDIR)/upcomming.o
 	
-#	$(CC) -g -O -c $(SRCTESTDIR)/test.c -fPIC -DPIC -o $(OBJDIR)/objtest/test.o
+	$(CC) -g -O -c $(SRCTESTDIR)/Test.c -fPIC -DPIC -o $(OBJDIR)/testobj/Test.o
 	
 
 	
-#	$(CC) -o $(BINDIR)/$(TARGET) $(OBJDIR)/*.o libmysql.dll
+	$(CC) -o $(BINDIR)/$(TARGET) $(OBJDIR)/*.o libmysql.dll
 	
-	$(CC) -o bin/theatre_reservation_system $(OBJDIR)/main.o $(OBJDIR)/login.o $(OBJDIR)/admin.o $(OBJDIR)/customer.o $(OBJDIR)/movie.o $(OBJDIR)/upcomming.o libmysql.dll
+	$(CC) -o $(BINDIR)/Test $(OBJDIR)/testobj/Test.o $(OBJDIR)/login.o $(OBJDIR)/admin.o $(OBJDIR)/customer.o $(OBJDIR)/movie.o $(OBJDIR)/upcomming.o libmysql.dll
 	
 
 
-	@echo "Now you can run theatre_reservation_system file from bin directory by using following command"
+	@echo "Now you can run test and theatre_reservation_system files from  bin directory by using following commands"
 	@echo "bin/./theatre_reservation_system"
-#	@echo "bin/./test"
+	@echo "bin/./Test"
 .PHONY: clean
 clean:
 	@$(rm) $(BINDIR)/$(TARGET)
