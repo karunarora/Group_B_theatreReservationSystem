@@ -1,0 +1,182 @@
+\hypertarget{login_8c}{}\doxysection{login.\+c File Reference}
+\label{login_8c}\index{login.c@{login.c}}
+
+
+Validations of credentials by admin and customer.  
+
+
+{\ttfamily \#include \char`\"{}../include/login.\+h\char`\"{}}\newline
+Include dependency graph for login.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{login_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{login_8c_ab1988ff1b0308d39bbed69c595388841}{admin\+\_\+login\+\_\+input}} ()
+\begin{DoxyCompactList}\small\item\em This function takes input values for \mbox{\hyperlink{login_8c_a07ddad5a79dcade8619198d370ea20eb}{admin\+\_\+login()}} \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{login_8c_a07ddad5a79dcade8619198d370ea20eb}{admin\+\_\+login}} (char $\ast$name, char $\ast$password)
+\begin{DoxyCompactList}\small\item\em A function to take arguments from the admin to login to the system and verify credentials from the database. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{login_8c_a7b5ce0b7f545ec2efd282da83f27879e}{customer\+\_\+login\+\_\+input}} ()
+\begin{DoxyCompactList}\small\item\em This function takes input value for \mbox{\hyperlink{login_8c_a6b10b92f8741b5eac542b76064f216a1}{customer\+\_\+login()}} \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{login_8c_a6b10b92f8741b5eac542b76064f216a1}{customer\+\_\+login}} (char $\ast$username, char $\ast$password)
+\begin{DoxyCompactList}\small\item\em This function takes arguements from customer input function and verify credentials from db. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{login_8c_ad28b5a40354ea95099c4a194b3210451}{logout}} ()
+\begin{DoxyCompactList}\small\item\em This function logsout the customer and admin out of the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Validations of credentials by admin and customer. 
+
+\begin{DoxyAuthor}{Author}
+Jasvir Kaur -\/ \href{mailto:jasvirkaur@cmail.carleton.ca}{\texttt{ jasvirkaur@cmail.\+carleton.\+ca}} 
+
+Karun Arora -\/ \href{mailto:karunarora@cmail.carleton.ca}{\texttt{ karunarora@cmail.\+carleton.\+ca}} 
+
+Harashdeep Kaur Minhas -\/ \href{mailto:harashdeepkaurminhas@cmail.carleton.ca}{\texttt{ harashdeepkaurminhas@cmail.\+carleton.\+ca}} 
+
+Paramveer Singh -\/ \href{mailto:paramveersingh3@cmail.carleton.ca}{\texttt{ paramveersingh3@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{login_8c_a07ddad5a79dcade8619198d370ea20eb}\label{login_8c_a07ddad5a79dcade8619198d370ea20eb}} 
+\index{login.c@{login.c}!admin\_login@{admin\_login}}
+\index{admin\_login@{admin\_login}!login.c@{login.c}}
+\doxysubsubsection{\texorpdfstring{admin\_login()}{admin\_login()}}
+{\footnotesize\ttfamily int admin\+\_\+login (\begin{DoxyParamCaption}\item[{char $\ast$}]{name,  }\item[{char $\ast$}]{password }\end{DoxyParamCaption})}
+
+
+
+A function to take arguments from the admin to login to the system and verify credentials from the database. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char$\ast$name---} & username of the admin \\
+\hline
+\mbox{\texttt{ in}}  & {\em char$\ast$password---} & Password provided by the admin.\\
+\hline
+\end{DoxyParams}
+@description of function A function will be called when A\+D\+M\+IN wants to login in his account by entering his username and password. \begin{DoxyReturn}{Returns}
+It returns adminid. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{login_8c_a07ddad5a79dcade8619198d370ea20eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{login_8c_ab1988ff1b0308d39bbed69c595388841}\label{login_8c_ab1988ff1b0308d39bbed69c595388841}} 
+\index{login.c@{login.c}!admin\_login\_input@{admin\_login\_input}}
+\index{admin\_login\_input@{admin\_login\_input}!login.c@{login.c}}
+\doxysubsubsection{\texorpdfstring{admin\_login\_input()}{admin\_login\_input()}}
+{\footnotesize\ttfamily int admin\+\_\+login\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function takes input values for \mbox{\hyperlink{login_8c_a07ddad5a79dcade8619198d370ea20eb}{admin\+\_\+login()}} 
+
+This function takes no parameter
+
+\begin{DoxyReturn}{Returns}
+It returns int type value. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{login_8c_ab1988ff1b0308d39bbed69c595388841_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{login_8c_ab1988ff1b0308d39bbed69c595388841_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{login_8c_a6b10b92f8741b5eac542b76064f216a1}\label{login_8c_a6b10b92f8741b5eac542b76064f216a1}} 
+\index{login.c@{login.c}!customer\_login@{customer\_login}}
+\index{customer\_login@{customer\_login}!login.c@{login.c}}
+\doxysubsubsection{\texorpdfstring{customer\_login()}{customer\_login()}}
+{\footnotesize\ttfamily int customer\+\_\+login (\begin{DoxyParamCaption}\item[{char $\ast$}]{username,  }\item[{char $\ast$}]{password }\end{DoxyParamCaption})}
+
+
+
+This function takes arguements from customer input function and verify credentials from db. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & $\ast$username username provided by the customer \\
+\hline
+\mbox{\texttt{ in}}  & {\em char} & $\ast$password password provided by the customer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns usereid 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{login_8c_a6b10b92f8741b5eac542b76064f216a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{login_8c_a7b5ce0b7f545ec2efd282da83f27879e}\label{login_8c_a7b5ce0b7f545ec2efd282da83f27879e}} 
+\index{login.c@{login.c}!customer\_login\_input@{customer\_login\_input}}
+\index{customer\_login\_input@{customer\_login\_input}!login.c@{login.c}}
+\doxysubsubsection{\texorpdfstring{customer\_login\_input()}{customer\_login\_input()}}
+{\footnotesize\ttfamily int customer\+\_\+login\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function takes input value for \mbox{\hyperlink{login_8c_a6b10b92f8741b5eac542b76064f216a1}{customer\+\_\+login()}} 
+
+This function takes no parameter
+
+\begin{DoxyReturn}{Returns}
+It returns int type value. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{login_8c_a7b5ce0b7f545ec2efd282da83f27879e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{login_8c_a7b5ce0b7f545ec2efd282da83f27879e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{login_8c_ad28b5a40354ea95099c4a194b3210451}\label{login_8c_ad28b5a40354ea95099c4a194b3210451}} 
+\index{login.c@{login.c}!logout@{logout}}
+\index{logout@{logout}!login.c@{login.c}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily int logout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function logsout the customer and admin out of the system. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{login_8c_ad28b5a40354ea95099c4a194b3210451_icgraph}
+\end{center}
+\end{figure}

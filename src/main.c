@@ -9,10 +9,8 @@
 #include "../include/customer.h"
 #include "../include/upcomming.h"
 
-/* Function's declaration for initializes the connection 
-This function is done by Jasvir Kaur
-*/
 
+// this will initialize the connection
 void init_setup(char* user_name, char* password, char* url, char* database);
 char tempBuffer[500];
 
@@ -21,7 +19,7 @@ char tempBuffer[500];
 int main(int argc, char** argv)
 {
 	init_setup("root", "karun9855", "localhost", "theatrereservationsystem");
-	logout();
+	//logout();
 	char option[50] = "";
 	while (strcmp(option, "e") != 0)
 	{
@@ -172,10 +170,8 @@ int main(int argc, char** argv)
 	}
 	return 0;
 }
-/* This function setup and validate the connection with the sql database 
-This function is done by Jasvir Kaur
-*/
 
+// setup and validate the connection with the sql database
 void init_setup(char* user_name, char* password, char* url, char* database) {
 	strcpy(USER_NAME, user_name);
 	strcpy(PASSWORD, password);

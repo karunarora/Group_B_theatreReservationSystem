@@ -1,0 +1,501 @@
+\hypertarget{customer_8c}{}\doxysection{customer.\+c File Reference}
+\label{customer_8c}\index{customer.c@{customer.c}}
+
+
+all customer functionalities of system will be handled, in this file.  
+
+
+{\ttfamily \#include \char`\"{}../include/customer.\+h\char`\"{}}\newline
+Include dependency graph for customer.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{customer_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{customer_8c_a0701c30e3db75625f7186d7b9b2d8e0c}{display\+\_\+customers}} ()
+\begin{DoxyCompactList}\small\item\em This function display all customers. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{customer_8c_ac89066b4e1a28986488e592dddfac502}{add\+\_\+customer\+\_\+input}} ()
+\begin{DoxyCompactList}\small\item\em This function takes input value for \mbox{\hyperlink{customer_8c_ac89066b4e1a28986488e592dddfac502}{add\+\_\+customer\+\_\+input()}} \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{customer_8c_a3a2bbe6769f08404e24505d935ca6c99}{username\+\_\+exists}} (char $\ast$username)
+\item 
+int \mbox{\hyperlink{customer_8c_ad25e4a5965bc5b297e50f339dc3ad435}{update\+\_\+customer\+\_\+input}} ()
+\item 
+int \mbox{\hyperlink{customer_8c_a4e69e2e2c82becd06a41a1e2ee78f4b7}{add\+\_\+customer}} (char $\ast$name, char $\ast$username, char sex, char $\ast$password)
+\begin{DoxyCompactList}\small\item\em This function takes name, balance, sex, password as its input parameters for signing up new customer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{customer_8c_a9c9b8698707864182d77df26bc0286eb}{update\+\_\+customer}} (int id, char $\ast$name, char sex, char $\ast$password)
+\begin{DoxyCompactList}\small\item\em A function to update the personal data (name, login, password, gender) of a customer in Database who is already logged in. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{customer_8c_ad27dd5ffc9729a7d6a573b378d06efdd}{book\+\_\+movie\+\_\+input}} ()
+\begin{DoxyCompactList}\small\item\em This function takes input value for book\+\_\+movie. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{customer_8c_ac77432eff57ba1d67b4c6516eaf75bfb}{book\+\_\+movie}} (int customer\+\_\+id, int movie\+\_\+id, int \mbox{\hyperlink{customer_8c_a644866c079eb5e08896dc2f2776a4049}{seat\+\_\+number}})
+\begin{DoxyCompactList}\small\item\em A function to book movie. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{customer_8c_a9fb8c6ac338320c6c99d4ac926443fa8}{stof}} (const char $\ast$s)
+\item 
+int \mbox{\hyperlink{customer_8c_a644866c079eb5e08896dc2f2776a4049}{seat\+\_\+number}} (int movie\+\_\+id)
+\begin{DoxyCompactList}\small\item\em This function is used to check seats booked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{customer_8c_ad35b24addce942915487a4cabd7c88b0}{display\+\_\+current\+\_\+customer}} ()
+\begin{DoxyCompactList}\small\item\em This function is of void type and used to display current customer details. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{customer_8c_a20b60bd9c40c2ace00b94876c51c99d6}{add\+\_\+credit\+\_\+input}} ()
+\begin{DoxyCompactList}\small\item\em This function takes input value for add\+\_\+credit function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{customer_8c_aaf18f7b019aa83cb18dd614e3b5e603e}{add\+\_\+credit}} (int id, float amount, char $\ast$number, char $\ast$cvv, char $\ast$expdate)
+\begin{DoxyCompactList}\small\item\em This function is used to add credit to customers account balance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{customer_8c_ae95a5385f2ac18b80e64e9c199201fc6}{display\+\_\+transaction}} ()
+\begin{DoxyCompactList}\small\item\em This function is of int type and used to display tansactions to customers. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{customer_8c_adf0117179c38cbd14569ea71ae851c09}{display\+\_\+booked\+\_\+movies}} (int id)
+\begin{DoxyCompactList}\small\item\em This function displays movies that has been booked. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{customer_8c_abe0245af5a8d8227d23cabadbb394a31}{display\+\_\+customer}} (int id)
+\begin{DoxyCompactList}\small\item\em This function takes customer id as input and will print the details of the customer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+all customer functionalities of system will be handled, in this file. 
+
+\begin{DoxyAuthor}{Author}
+Jasvir Kaur -\/ \href{mailto:jasvirkaur@cmail.carleton.ca}{\texttt{ jasvirkaur@cmail.\+carleton.\+ca}} 
+
+Karun Arora -\/ \href{mailto:karunarora@cmail.carleton.ca}{\texttt{ karunarora@cmail.\+carleton.\+ca}} 
+
+Harashdeep Kaur Minhas -\/ \href{mailto:harashdeepkaurminhas@cmail.carleton.ca}{\texttt{ harashdeepkaurminhas@cmail.\+carleton.\+ca}} 
+
+Paramveer Singh -\/ \href{mailto:paramveersingh3@cmail.carleton.ca}{\texttt{ paramveersingh3@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{customer_8c_aaf18f7b019aa83cb18dd614e3b5e603e}\label{customer_8c_aaf18f7b019aa83cb18dd614e3b5e603e}} 
+\index{customer.c@{customer.c}!add\_credit@{add\_credit}}
+\index{add\_credit@{add\_credit}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{add\_credit()}{add\_credit()}}
+{\footnotesize\ttfamily int add\+\_\+credit (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{float}]{amount,  }\item[{char $\ast$}]{number,  }\item[{char $\ast$}]{cvv,  }\item[{char $\ast$}]{expdate }\end{DoxyParamCaption})}
+
+
+
+This function is used to add credit to customers account balance. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & id -\/ this takes integer type value for customer id. \\
+\hline
+\mbox{\texttt{ in}}  & {\em float} & amount -\/ amount customer wanted to add to his account. \\
+\hline
+\mbox{\texttt{ in}}  & {\em number} & -\/ it is of int type and takes in credit card number. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cvv} & -\/ takes in cvv number for authentication purposes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em expdate} & -\/ takes in expiry date for card.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns integer type value. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{customer_8c_aaf18f7b019aa83cb18dd614e3b5e603e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_a20b60bd9c40c2ace00b94876c51c99d6}\label{customer_8c_a20b60bd9c40c2ace00b94876c51c99d6}} 
+\index{customer.c@{customer.c}!add\_credit\_input@{add\_credit\_input}}
+\index{add\_credit\_input@{add\_credit\_input}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{add\_credit\_input()}{add\_credit\_input()}}
+{\footnotesize\ttfamily int add\+\_\+credit\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function takes input value for add\+\_\+credit function. 
+
+This function takes no parameter
+
+\begin{DoxyReturn}{Returns}
+It returns int type value. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{customer_8c_a20b60bd9c40c2ace00b94876c51c99d6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{customer_8c_a20b60bd9c40c2ace00b94876c51c99d6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_a4e69e2e2c82becd06a41a1e2ee78f4b7}\label{customer_8c_a4e69e2e2c82becd06a41a1e2ee78f4b7}} 
+\index{customer.c@{customer.c}!add\_customer@{add\_customer}}
+\index{add\_customer@{add\_customer}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{add\_customer()}{add\_customer()}}
+{\footnotesize\ttfamily int add\+\_\+customer (\begin{DoxyParamCaption}\item[{char $\ast$}]{name,  }\item[{char $\ast$}]{username,  }\item[{char}]{sex,  }\item[{char $\ast$}]{password }\end{DoxyParamCaption})}
+
+
+
+This function takes name, balance, sex, password as its input parameters for signing up new customer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & $\ast$name name provided by customer \\
+\hline
+\mbox{\texttt{ in}}  & {\em char} & $\ast$username username provided by the customer \\
+\hline
+\mbox{\texttt{ in}}  & {\em char} & $\ast$sex sex provided by the customer \\
+\hline
+\mbox{\texttt{ in}}  & {\em char} & $\ast$password password provided by the customer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns 0 for succesfully adding customer and 1 for error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{customer_8c_a4e69e2e2c82becd06a41a1e2ee78f4b7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{customer_8c_a4e69e2e2c82becd06a41a1e2ee78f4b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_ac89066b4e1a28986488e592dddfac502}\label{customer_8c_ac89066b4e1a28986488e592dddfac502}} 
+\index{customer.c@{customer.c}!add\_customer\_input@{add\_customer\_input}}
+\index{add\_customer\_input@{add\_customer\_input}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{add\_customer\_input()}{add\_customer\_input()}}
+{\footnotesize\ttfamily int add\+\_\+customer\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function takes input value for \mbox{\hyperlink{customer_8c_ac89066b4e1a28986488e592dddfac502}{add\+\_\+customer\+\_\+input()}} 
+
+This function takes no parameter
+
+\begin{DoxyReturn}{Returns}
+It returns int type value. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{customer_8c_ac89066b4e1a28986488e592dddfac502_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{customer_8c_ac89066b4e1a28986488e592dddfac502_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_ac77432eff57ba1d67b4c6516eaf75bfb}\label{customer_8c_ac77432eff57ba1d67b4c6516eaf75bfb}} 
+\index{customer.c@{customer.c}!book\_movie@{book\_movie}}
+\index{book\_movie@{book\_movie}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{book\_movie()}{book\_movie()}}
+{\footnotesize\ttfamily int book\+\_\+movie (\begin{DoxyParamCaption}\item[{int}]{customer\+\_\+id,  }\item[{int}]{movie\+\_\+id,  }\item[{int}]{seat\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+A function to book movie. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em customer\+\_\+id} & –--This parameter gives the customer id (unique in nature). \\
+\hline
+\mbox{\texttt{ in}}  & {\em movie\+\_\+id---} & This parameter gives movie id for particular movie \\
+\hline
+\mbox{\texttt{ in}}  & {\em seat\+\_\+number--} & This is of int type and gives away seat number.\\
+\hline
+\end{DoxyParams}
+@description This function takes in customer and movie id, seat number to book movie.
+
+\begin{DoxyReturn}{Returns}
+int type value. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{customer_8c_ac77432eff57ba1d67b4c6516eaf75bfb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{customer_8c_ac77432eff57ba1d67b4c6516eaf75bfb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_ad27dd5ffc9729a7d6a573b378d06efdd}\label{customer_8c_ad27dd5ffc9729a7d6a573b378d06efdd}} 
+\index{customer.c@{customer.c}!book\_movie\_input@{book\_movie\_input}}
+\index{book\_movie\_input@{book\_movie\_input}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{book\_movie\_input()}{book\_movie\_input()}}
+{\footnotesize\ttfamily int book\+\_\+movie\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function takes input value for book\+\_\+movie. 
+
+This function takes no parameter
+
+\begin{DoxyReturn}{Returns}
+It returns int type value. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{customer_8c_ad27dd5ffc9729a7d6a573b378d06efdd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{customer_8c_ad27dd5ffc9729a7d6a573b378d06efdd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_adf0117179c38cbd14569ea71ae851c09}\label{customer_8c_adf0117179c38cbd14569ea71ae851c09}} 
+\index{customer.c@{customer.c}!display\_booked\_movies@{display\_booked\_movies}}
+\index{display\_booked\_movies@{display\_booked\_movies}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{display\_booked\_movies()}{display\_booked\_movies()}}
+{\footnotesize\ttfamily int display\+\_\+booked\+\_\+movies (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+This function displays movies that has been booked. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & -\/ This is of int type and this parameter takes particular movie id.\\
+\hline
+\end{DoxyParams}
+@description This function uses above listed parameters displays the movies that has been booked.
+
+\begin{DoxyReturn}{Returns}
+returns int type value for this functuion. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{customer_8c_adf0117179c38cbd14569ea71ae851c09_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_ad35b24addce942915487a4cabd7c88b0}\label{customer_8c_ad35b24addce942915487a4cabd7c88b0}} 
+\index{customer.c@{customer.c}!display\_current\_customer@{display\_current\_customer}}
+\index{display\_current\_customer@{display\_current\_customer}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{display\_current\_customer()}{display\_current\_customer()}}
+{\footnotesize\ttfamily void display\+\_\+current\+\_\+customer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is of void type and used to display current customer details. 
+
+takes no parameters.
+
+@description This function diaplays the details of current logged in customer in system .
+
+\begin{DoxyReturn}{Returns}
+No return value for this functuion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{customer_8c_abe0245af5a8d8227d23cabadbb394a31}\label{customer_8c_abe0245af5a8d8227d23cabadbb394a31}} 
+\index{customer.c@{customer.c}!display\_customer@{display\_customer}}
+\index{display\_customer@{display\_customer}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{display\_customer()}{display\_customer()}}
+{\footnotesize\ttfamily int display\+\_\+customer (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+This function takes customer id as input and will print the details of the customer. 
+
+@parameter id -\/ takes in customer id. \begin{DoxyReturn}{Returns}
+It returns 0 in case of error and 1 for successful query 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{customer_8c_abe0245af5a8d8227d23cabadbb394a31_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_a0701c30e3db75625f7186d7b9b2d8e0c}\label{customer_8c_a0701c30e3db75625f7186d7b9b2d8e0c}} 
+\index{customer.c@{customer.c}!display\_customers@{display\_customers}}
+\index{display\_customers@{display\_customers}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{display\_customers()}{display\_customers()}}
+{\footnotesize\ttfamily int display\+\_\+customers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function display all customers. 
+
+This function takes no parameter
+
+\begin{DoxyReturn}{Returns}
+It returns int type value. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{customer_8c_a0701c30e3db75625f7186d7b9b2d8e0c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_ae95a5385f2ac18b80e64e9c199201fc6}\label{customer_8c_ae95a5385f2ac18b80e64e9c199201fc6}} 
+\index{customer.c@{customer.c}!display\_transaction@{display\_transaction}}
+\index{display\_transaction@{display\_transaction}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{display\_transaction()}{display\_transaction()}}
+{\footnotesize\ttfamily int display\+\_\+transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is of int type and used to display tansactions to customers. 
+
+takes no parameters.
+
+@description This function displays all the transaction of customer account to customer.
+
+\begin{DoxyReturn}{Returns}
+No return value for this function. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{customer_8c_ae95a5385f2ac18b80e64e9c199201fc6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_a644866c079eb5e08896dc2f2776a4049}\label{customer_8c_a644866c079eb5e08896dc2f2776a4049}} 
+\index{customer.c@{customer.c}!seat\_number@{seat\_number}}
+\index{seat\_number@{seat\_number}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{seat\_number()}{seat\_number()}}
+{\footnotesize\ttfamily int seat\+\_\+number (\begin{DoxyParamCaption}\item[{int}]{movie\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+This function is used to check seats booked. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em movie\+\_\+id} & -\/ This is of int type and this parameter takes particular movie id.\\
+\hline
+\end{DoxyParams}
+@description This function check the seats that has been booked for movie with that particular movie id.
+
+\begin{DoxyReturn}{Returns}
+returns int type value for this functuion. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{customer_8c_a644866c079eb5e08896dc2f2776a4049_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_a9fb8c6ac338320c6c99d4ac926443fa8}\label{customer_8c_a9fb8c6ac338320c6c99d4ac926443fa8}} 
+\index{customer.c@{customer.c}!stof@{stof}}
+\index{stof@{stof}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{stof()}{stof()}}
+{\footnotesize\ttfamily float stof (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{customer_8c_a9fb8c6ac338320c6c99d4ac926443fa8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_a9c9b8698707864182d77df26bc0286eb}\label{customer_8c_a9c9b8698707864182d77df26bc0286eb}} 
+\index{customer.c@{customer.c}!update\_customer@{update\_customer}}
+\index{update\_customer@{update\_customer}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{update\_customer()}{update\_customer()}}
+{\footnotesize\ttfamily int update\+\_\+customer (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{char $\ast$}]{name,  }\item[{char}]{sex,  }\item[{char $\ast$}]{password }\end{DoxyParamCaption})}
+
+
+
+A function to update the personal data (name, login, password, gender) of a customer in Database who is already logged in. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & –--This parameter gives the customer id (unique in nature). \\
+\hline
+\mbox{\texttt{ in}}  & {\em name---} & This parameter returns the name of the customer. This is of varchar type of length 28 \\
+\hline
+\mbox{\texttt{ in}}  & {\em password---} & This gives the password.\+This is of varchar type of length 8 \\
+\hline
+\mbox{\texttt{ in}}  & {\em sex---} & Gives the gender of the customer which is of character type\\
+\hline
+\end{DoxyParams}
+@description of function A function will be called when C\+U\+S\+T\+O\+M\+ER wants to update his/her $\ast$username, password, and gender by entering 1 in his portal which will call the update function.
+
+\begin{DoxyReturn}{Returns}
+int type value 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{customer_8c_a9c9b8698707864182d77df26bc0286eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_ad25e4a5965bc5b297e50f339dc3ad435}\label{customer_8c_ad25e4a5965bc5b297e50f339dc3ad435}} 
+\index{customer.c@{customer.c}!update\_customer\_input@{update\_customer\_input}}
+\index{update\_customer\_input@{update\_customer\_input}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{update\_customer\_input()}{update\_customer\_input()}}
+{\footnotesize\ttfamily int update\+\_\+customer\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{customer_8c_ad25e4a5965bc5b297e50f339dc3ad435_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{customer_8c_ad25e4a5965bc5b297e50f339dc3ad435_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{customer_8c_a3a2bbe6769f08404e24505d935ca6c99}\label{customer_8c_a3a2bbe6769f08404e24505d935ca6c99}} 
+\index{customer.c@{customer.c}!username\_exists@{username\_exists}}
+\index{username\_exists@{username\_exists}!customer.c@{customer.c}}
+\doxysubsubsection{\texorpdfstring{username\_exists()}{username\_exists()}}
+{\footnotesize\ttfamily int username\+\_\+exists (\begin{DoxyParamCaption}\item[{char $\ast$}]{username }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{customer_8c_a3a2bbe6769f08404e24505d935ca6c99_icgraph}
+\end{center}
+\end{figure}

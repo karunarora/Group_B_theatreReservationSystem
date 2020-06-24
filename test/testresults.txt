@@ -1,0 +1,458 @@
+*********************************TEST Case 1 for Admin Login**********************************************
+***********************************TEST 1A*****************************************************
+We are first going to login using correct credentials for Admin i.e. Userid=admin and password=admin
+Expected result is it should return 0
+ 
+
+PASSED
+
+
+*********************************TEST Case 2 for Admin Login**********************************************
+***********************************TEST 1B*****************************************************
+We are first going to login using wrong credentials for Admin i.e. Userid=admin and password=123
+Expected result is it should return -1
+ 
+
+PASSED
+
+
+*********************************TEST Case 3 for Customer Login**********************************************
+***********************************TEST 1C*****************************************************
+We are first going to login using correct credentials for Customer named karun i.e. Username=karun and password=karun
+Expected result is it should return userid that is 1 for karun
+ 
+
+FAILED
+
+
+*********************************TEST Case 4 for Customer Login**********************************************
+***********************************TEST 1D*****************************************************
+We are first going to login using wrong credentials for Customer named karun i.e. Username=karun and password=123
+Expected result is it should return 0
+ 
+
+PASSED
+
+
+*********************************TEST Case 5 for Logout**********************************************
+***********************************TEST 1E*****************************************************
+we are running the logout function 
+Expected result is it should return 0 in case of correctly run
+ 
+
+PASSED
+
+
+*********************************TEST Case 6 for Display Selling**********************************************
+***********************************TEST 2A*****************************************************
+Display selling on particular date i.e 2020/6/15
+Expected result is it should return 0 and display how much earned on that date
+ 
+
+PASSED
+
+
+*********************************TEST Case 7 for Display Selling**********************************************
+***********************************TEST 2B*****************************************************
+Display selling with wrong date
+Expected result is it should return 1 and display invalid date message
+ 
+
+PASSED
+
+
+*********************************TEST Case 8 for Display Selling**********************************************
+***********************************TEST 2C*****************************************************
+total earning on particluar date, passing right date
+Expected result is it should return 0 and display total earning
+ 
+
+PASSED
+
+
+*********************************TEST Case 9 for Display Selling**********************************************
+***********************************TEST 2D*****************************************************
+total earning on particluar date, passing wrong date
+Expected result is it should return 1 and invalid date message
+ 
+
+PASSED
+
+
+*********************************TEST Case 10 for Display Selling**********************************************
+***********************************TEST 2E*****************************************************
+passing -1 will display all the tickets purchased by all the users
+Expected result is it should return 0 and display table of tickets purchased by users
+ 
+
+PASSED
+
+
+*********************************TEST Case 11 for Display Selling**********************************************
+***********************************TEST 3A*****************************************************
+display customer
+Expected result is it should return 0
+ 
+
+PASSED
+
+
+*********************************TEST Case 12 for Display Selling**********************************************
+***********************************TEST 3B*****************************************************
+display customer
+Expected result is it should return 1 in case of error
+ 
+
+FAILED
+
+
+*********************************TEST Case 13 for Display Selling**********************************************
+***********************************TEST 3C*****************************************************
+username_exists passing existing username
+Expected result is it should return 0 and display that user already exsist
+ 
+
+PASSED
+
+
+*********************************TEST Case 14 for Display Selling**********************************************
+***********************************TEST 3D*****************************************************
+username_exists passing new username
+Expected result is it should return 1
+ 
+
+PASSED
+
+
+*********************************TEST Case 15 for Display Selling**********************************************
+***********************************TEST 3E*****************************************************
+add_customer passing right values
+Expected result is it should return 0 and will registeruser
+ 
+
+PASSED
+
+
+*********************************TEST Case 16 for Display Selling**********************************************
+***********************************TEST 3F*****************************************************
+add_customer passing wrong values, username more than 24 chararcters
+Expected result is it should return 1 and will display error message that data is too long for column username
+ 
+
+PASSED
+
+
+*********************************TEST Case 17 for Display Selling**********************************************
+***********************************TEST 3A*****************************************************
+add_customer passing wrong values, password more than 24 chararcters
+Expected result is it should return 1 and will display error message that data is too long for column password
+ 
+
+PASSED
+
+
+*********************************TEST Case 18 for Display Selling**********************************************
+***********************************TEST 3A*****************************************************
+add_customer passing wrong values, already exsistsing user
+Expected result is it should return 1 and will display error message that username already exsist e0
+ 
+
+FAILED
+
+
+*********************************TEST Case 19 for Display Selling**********************************************
+***********************************TEST 3A*****************************************************
+update_customer passing right values
+Expected result is it should return 0 and will update user
+ 
+
+PASSED
+
+
+*********************************TEST Case 20 for Display Selling**********************************************
+***********************************TEST 3A*****************************************************
+update_customer passing wrong values, name more than 24 chararcters
+Expected result is it should return 1 and will display error message that data is too long for column name
+ 
+
+PASSED
+
+
+*********************************TEST Case 21 for Display Selling**********************************************
+***********************************TEST 3A*****************************************************
+update_customer passing wrong values, name more than 24 chararcters
+Expected result is it should return 1 and will display error message that data is too long for column password
+
+
+PASSED
+
+
+*********************************TEST Case 22 for Display Selling**********************************************
+***********************************TEST 3A*****************************************************
+update_customer passing wrong values, sex more  chararcters
+Expected result is it should return 1 and will display error message that data is too long for column sex
+
+
+PASSED
+
+
+*********************************TEST Case 23 for Display Selling**********************************************
+***********************************TEST 4A*****************************************************
+add_movie
+Expected result is it should return 0
+ 
+
+PASSED
+
+
+*********************************TEST Case 24 for Display Selling**********************************************
+***********************************TEST 4A*****************************************************
+add_movie
+Expected result is it should return 1
+ 
+
+PASSED
+
+
+*********************************TEST Case 25 for Display Selling**********************************************
+***********************************TEST 4A*****************************************************
+update_movie
+Expected result is it should return 0
+ 
+
+PASSED
+
+
+*********************************TEST Case 26 for Display Selling**********************************************
+***********************************TEST 4A*****************************************************
+update_movie
+Expected result is it should return 1 display error message data too long
+ 
+
+FAILED
+
+
+*********************************TEST Case 27 for Display Selling**********************************************
+***********************************TEST 4A*****************************************************
+remove_movie
+Expected result is it should return 0
+ 
+
+PASSED
+
+
+*********************************TEST Case 28 for Display Selling**********************************************
+***********************************TEST 4A*****************************************************
+remove_movie with wrong movie id
+Expected result is it should return 1 error message display
+ 
+
+FAILED
+
+
+*********************************TEST Case 29 for Display Selling**********************************************
+***********************************TEST 4A*****************************************************
+movie_exists right value
+Expected result is it should return 0
+ 
+
+PASSED
+
+
+*********************************TEST Case 30 for Display Selling**********************************************
+***********************************TEST 4A*****************************************************
+movie_exists right value
+Expected result is it should return 1
+ 
+
+PASSED
+
+
+*********************************TEST Case 31 for Display Selling**********************************************
+***********************************TEST 4A*****************************************************
+display_movie right value
+Expected result is it should return 0
+ 
+
+PASSED
+
+
+*********************************TEST Case 33 for Display Selling**********************************************
+***********************************TEST 4A*****************************************************
+display_movie in case of any error
+Expected result is it should return 1
+ 
+
+FAILED
+
+
+*********************************TEST Case 34 for book_movie**********************************************
+***********************************TEST 4A*****************************************************
+We are first going to login using correct data i.e. userid=22, movieid=2, seatnumber=37
+Expected result is it should return 0 and will print that movie booked
+ 
+
+FAILED
+
+
+*********************************TEST Case 35 for book_movie**********************************************
+***********************************TEST 4A*****************************************************
+next we gave the same input as before i.e. userid=22, movieid=2, seatnumber=37 
+Expected result is it should return 1 and it will print seat already occupied
+ 
+
+PASSED
+
+
+*********************************TEST Case 36 for book_movie**********************************************
+***********************************TEST 4A*****************************************************
+Now we are giving out of range seat number i.e. userid=1, movieid=1, seatnumber=55 
+Expected result is it should return 1 and will print invalid seat number
+ 
+
+FAILED
+
+
+*********************************TEST Case 37 for book_movie**********************************************
+***********************************TEST 4A*****************************************************
+The user with id=5 does not have balance
+Expected result is it should return 1 and it will print not enough credit
+ 
+
+FAILED
+
+
+*********************************TEST Case 39 for book_movie**********************************************
+***********************************TEST 4A*****************************************************
+We are Giving wrong input for movie id i.e. movieId=25 which does not exists
+Expected result is it should return 1 and it will print no movie exists
+ 
+
+PASSED
+
+
+*********************************TEST Case 40 for seat_number**********************************************
+***********************************TEST 4A*****************************************************
+We are Giving right input for movie id i.e. movieId=2 
+Expected result is it should return 0 
+ 
+
+PASSED
+
+
+*********************************TEST Case 41 for seat_number**********************************************
+***********************************TEST 4A*****************************************************
+We are Giving wrong input for movie id i.e. movieId=25 which does not exists
+Expected result is it should return 1 and it will print no movie exists
+ 
+
+FAILED
+
+
+*********************************TEST Case 42 for add_credit**********************************************
+***********************************TEST 4A*****************************************************
+We are Giving right input to add credit
+Expected result is it should return 0 and it will add credit to users account 
+
+PASSED
+
+
+*********************************TEST Case 43 for add_credit**********************************************
+***********************************TEST 4A*****************************************************
+We are Giving wrong input credit card number
+Expected result is it should return 1 and will not add credit to db
+ 
+
+FAILED
+
+
+*********************************TEST Case 44 for add_credit**********************************************
+***********************************TEST 4A*****************************************************
+We are Giving wrong input credit card number
+Expected result is it should return 1 and will not add credit to db
+ 
+
+FAILED
+
+
+*********************************TEST Case 45 for add_credit**********************************************
+***********************************TEST 4A*****************************************************
+We are Giving wrong input cvv number
+Expected result is it should return 1 and will not add credit to db
+ 
+
+FAILED
+
+
+*********************************TEST Case 46 for add_credit**********************************************
+***********************************TEST 4A*****************************************************
+We are Giving wrong input cvv number
+Expected result is it should return 1 and will not add credit to db
+ 
+
+FAILED
+
+
+*********************************TEST Case 47 for add_credit**********************************************
+***********************************TEST 4A*****************************************************
+We are Giving wrong input cfor date
+Expected result is it should return 1 and will not add credit to db error message diplay invalid date
+ 
+
+FAILED
+
+
+*********************************TEST Case 48 for Display Selling**********************************************
+***********************************TEST 4A*****************************************************
+display_transaction()
+Expected result is it should return 0
+ 
+
+PASSED
+
+
+*********************************TEST Case 49 for display_booked_movies**********************************************
+***********************************TEST 4A*****************************************************
+display_booked_movies
+Expected result is it should return 0
+ 
+
+FAILED
+
+
+*********************************TEST Case 50 for add_upcomming_movie**********************************************
+***********************************TEST 4A*****************************************************
+add_upcomming_movie
+Expected result is it should return 0
+ 
+
+PASSED
+
+
+*********************************TEST Case 51 for add_upcomming_movie**********************************************
+***********************************TEST 4A*****************************************************
+add_upcomming_movie with wrong date
+Expected result is it should return 1 and it will print invalid date
+ 
+
+PASSED
+
+
+*********************************TEST Case 52 for display_upcommig_movie**********************************************
+***********************************TEST 4A*****************************************************
+display_upcommig_movie()
+Expected result is it should return 0
+ 
+
+FAILED
+
+
+*********************************TEST Case 53 for display_upcommig_movie**********************************************
+***********************************TEST 4A*****************************************************
+display_upcommig_movie() in case of error
+Expected result is it should return 1 
+ 
+
+PASSED
+
+

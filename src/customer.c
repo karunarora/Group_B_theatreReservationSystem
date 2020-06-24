@@ -1,7 +1,26 @@
+/**
+ * @file.customer.c
+ *
+ * @brief all customer functionalities of system will be handled, in this file. 
+ *
+ * @author Jasvir Kaur - jasvirkaur@cmail.carleton.ca
+ * @author Karun Arora - karunarora@cmail.carleton.ca
+ * @author Harashdeep Kaur Minhas - harashdeepkaurminhas@cmail.carleton.ca
+ * @author Paramveer Singh - paramveersingh3@cmail.carleton.ca
+ */
 #include "../include/customer.h"
 
 
-// display all the customers
+/**
+*
+* @brief This function display all customers.
+*
+* This function takes no parameter
+*
+* @return It returns int type value.
+*
+*/
+
 int display_customers() {
 	mysql_query(con, "SELECT * FROM CUSTOMER");
 	MYSQL_RES* result = mysql_store_result(con);
@@ -9,7 +28,7 @@ int display_customers() {
 	if (result == NULL)
 	{
 		printf("%s", mysql_error(con));
-		return 0;
+		return 1;
 	}
 
 	int num_fields = mysql_num_fields(result);
@@ -43,9 +62,17 @@ int display_customers() {
 		printf("|\n");
 	}
 	mysql_free_result(result);
-	return 1;
+	return 0;
 }
-// add customer to the list
+/**
+*
+* @brief This function takes input value for add_customer_input()
+*
+*  This function takes no parameter
+*
+* @return It returns int type value.
+*
+*/
 int add_customer_input()
 {
 	char name[50];
@@ -81,7 +108,7 @@ int username_exists(char *username) {
 		}
 		int num_rows = mysql_num_rows(result);
 		if (num_rows == 0) {
-			//printf("%s\n", "Username exists");
+			//printf("%s Username already exists\n", username);
 			return 1;
 		}
 		return 0;
@@ -110,7 +137,20 @@ int update_customer_input()
 }
 
 
-
+/**
+*
+*\fn int add_customer( char* name,char *username, char sex,char *password)
+*@brief This function takes name, balance, sex, password as its input parameters for signing up
+new customer
+*
+*@param[in] char *name name provided by customer
+*@param[in] char *username username provided by the customer
+*@param[in] char *sex sex provided by the customer
+*@param[in] char *password password provided by the customer
+*
+*@return It returns 0 for succesfully adding customer and 1 for error
+*
+*/
 int add_customer( char* name,char *username, char sex,char *password) {
 
 	char sql_string[500] = "";
@@ -121,7 +161,7 @@ int add_customer( char* name,char *username, char sex,char *password) {
 	sprintf(sql_string, "insert into customer(name,username, sex,password) value ('%s','%s','%c','%s');", name,username, sex,password);
 
 	if (mysql_query(con, sql_string)) {
-		printf("%s", mysql_error(con));
+		printf("%s\n", mysql_error(con));
 		return 1;
 	}
 	
@@ -131,18 +171,39 @@ int add_customer( char* name,char *username, char sex,char *password) {
 	else{printf("%s\n", "Username exists");}
 	return 0;
 }
-
+/**
+* @brief A function to update the personal data (name, login, password, gender) of a customer in Database who is already logged in.
+*
+* @param[in] id –--This parameter gives the customer id (unique in nature).
+* @param[in] name--- This parameter returns the name of the customer. This is of varchar type of length 28
+* @param[in] password--- This gives the password.This is of varchar type of length 8
+* @param[in] sex--- Gives the gender of the customer which is of character type
+*
+*@description of function A function will be called when CUSTOMER wants to update his/her *username, password, and gender by entering 1 in his portal which will call the update function.
+*
+*@return int type value
+*
+*/
 int update_customer(int id, char* name, char sex,char *password) {
 	char sql_string[500] = "";
 	sprintf(sql_string, "update customer set name = '%s',  sex = '%c' ,password = '%s' where id = %d;", name, sex,password, id);
-	printf("Data Updated");
+	
 	if (mysql_query(con, sql_string)) {
-		printf("%s", mysql_error(con));
+		printf("%s\n", mysql_error(con));
 		return 1;
 	}
+	printf("Data Updated\n");
 	return 0;
 }
-
+/**
+*
+* @brief This function takes input value for book_movie
+*
+*  This function takes no parameter
+*
+* @return It returns int type value.
+*
+*/
 int book_movie_input()
 {
 	int movie_id;
@@ -156,7 +217,18 @@ int book_movie_input()
 	book_movie(userid, movie_id, seat_num);
 	return 0;
 }
-
+/**
+* @brief A function to book movie.
+*
+* @param[in] customer_id –--This parameter gives the customer id (unique in nature).
+* @param[in]  movie_id--- This parameter gives movie id for particular movie
+* @param[in] seat_number-- This is of int type and gives away seat number.
+*
+*@description This function takes in customer and movie id, seat number to book movie.
+*
+*@return int type value.
+*
+*/
 int book_movie(int customer_id,int movie_id,int seat_number) {
 	if (seat_number < 0 || seat_number> 50)
 	{
@@ -229,16 +301,17 @@ int book_movie(int customer_id,int movie_id,int seat_number) {
 	{
 		printf("BALANCE  :  %s\n", row[0]);
 		customer_balance = stof(row[0]);
-		printf("Movie booked");
-		
+		if (customer_balance < movie_price) {
+		printf("NOT ENOUGHT CREDIT\n");
+		return -1;
+	    }else{
+		printf("Movie booked\n");
+		}
 	}
 	else {
 		return -1;
 	}
-	if (customer_balance < movie_price) {
-		printf("NOT ENOUGHT CREDIT\n");
-		return -1;
-	}
+	
 	customer_balance = customer_balance - movie_price;
 	
 	sprintf(sql_string, "update customer set  balance = %.2f  where id = %d;",customer_balance ,customer_id);
@@ -276,7 +349,16 @@ float stof(const char* s){
 };
 
 
-
+/**
+ * @brief This function is used to check seats booked.
+ *
+ * @param[in] movie_id - This is of int type and this parameter takes particular movie id.
+ *
+ * @description This function check the seats that has been booked for movie with that particular movie id. 
+ * 
+ * @return returns int type value for this functuion.
+ *
+ */
 int seat_number(int movie_id)
 {
 	char sql_string[500] = "";
@@ -298,14 +380,31 @@ int seat_number(int movie_id)
 	int num_fields = mysql_num_fields(result);
 	return 0;
 }
-
+/**
+ * @brief This function is of void type and used to display current customer details.
+ *
+ * takes no parameters.
+ *
+ * @description This function diaplays the details of current logged in customer in system . 
+ * 
+ * @return No return value for this functuion.
+ *
+ */
 void display_current_customer()
 {
 	
 }
 
 
-// ask the user to for account info
+/**
+*
+* @brief This function takes input value for add_credit function. 
+*
+*  This function takes no parameter
+*
+* @return It returns int type value.
+*
+*/
 int add_credit_input()
 {
 	float amount;
@@ -334,7 +433,19 @@ int add_credit_input()
 	return -1;
 }
 
-// that input and store it in the database
+/**
+*
+*@brief This function is used to add credit to customers account balance.
+*
+*@param[in] int id - this takes integer type value for customer id.
+*@param[in] float amount - amount customer wanted to add to his account.
+*@param[in] number - it is of int type and takes in credit card number.
+*@param[in] cvv - takes in cvv number for authentication purposes.
+*@param[in] expdate - takes in expiry date for card.
+*
+*\return It returns integer type value.
+*
+*/
 int add_credit(int id, float amount,char *number,char *cvv ,char *expdate)
 {
 	char sql_string[500] = "";
@@ -347,7 +458,16 @@ int add_credit(int id, float amount,char *number,char *cvv ,char *expdate)
 
 }
 
-// display all the transaction done
+/**
+ * @brief This function is of int type and used to display tansactions to customers.
+ *
+ * takes no parameters.
+ *
+ * @description This function displays all the transaction of customer account to customer. 
+ * 
+ * @return No return value for this function.
+ *
+ */
 int display_transaction()
 {
 	char buf[100];
@@ -393,7 +513,16 @@ int display_transaction()
 	return 0;
 }
 
-// displays booked movie info 
+/**
+ * @brief This function displays movies that has been booked.
+ *
+ * @param[in] id - This is of int type and this parameter takes particular movie id.
+ *
+ * @description This function uses above listed parameters displays the movies that has been booked. 
+ * 
+ * @return returns int type value for this functuion.
+ *
+ */
 int display_booked_movies(int id)
 {
 	char buf[1000];
@@ -442,7 +571,15 @@ int display_booked_movies(int id)
 	return 1;
 }
 
-// display customer on id
+/**
+*
+*\fn int display_customer(int id)
+*@parameter id - takes in customer id.
+*@brief This function takes customer id as input and will print the details of the customer 
+*
+*@return It returns 0 in case of error and 1 for successful query
+*
+*/
 int display_customer(int id)
 {
 	char buf[100];

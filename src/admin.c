@@ -8,10 +8,19 @@
  * @author Harashdeep Kaur Minhas - harashdeepkaurminhas@cmail.carleton.ca
  * @author Paramveer Singh - paramveersingh3@cmail.carleton.ca
  */
+
 #include "../include/admin.h"
 
-
-// this will print all the selling information on a particular date
+/**
+ * @brief This function is used to display total number of movie tickets sold on that paricular date.
+ *
+ * @param[in] date - This is of char type and is used to enter date.
+ *
+ * @description With help of date parameter listed above, it displays total number of tickets sold on particular date. 
+ * 
+ * @return int type value for functuion.
+ *
+ */
 int display_selling(char* date) {
 	char sql_string[500] = "";
 	// store the query
@@ -22,8 +31,8 @@ int display_selling(char* date) {
 	MYSQL_RES* result = mysql_store_result(con);
 	if (result == NULL)
 	{
-		printf("%s", mysql_error(con));
-		return 0;
+		printf("%s\n", mysql_error(con));
+		return 1;
 	}
 	//fetch row from result
 	MYSQL_ROW row = mysql_fetch_row(result);
@@ -33,7 +42,16 @@ int display_selling(char* date) {
 
 	return 0;
 }
-// this will print all the earning information on a particular date
+/**
+ * @brief This function is used to display total income from movie tickets sold on that paricular date.
+ *
+ * @param[in] date - This is of char type and is used to enter date.
+ *
+ * @description With help of date parameter listed above, it displays total income earned by selling movie tickets on that particular date. 
+ * 
+ * @return int type value for function.
+ *
+ */
 int total_earning(char* date) {
 	char sql_string[500] = "";
 	// store the query
@@ -44,8 +62,8 @@ int total_earning(char* date) {
 	MYSQL_RES* result = mysql_store_result(con);
 	if (result == NULL)
 	{
-		printf("%s", mysql_error(con));
-		return 0;
+		printf("%s\n", mysql_error(con));
+		return 1;
 	}
 	MYSQL_ROW row = mysql_fetch_row(result);
 	//fetch row from result
@@ -56,7 +74,12 @@ int total_earning(char* date) {
 	}
 	return 0;
 }
-
+/**
+ * @brief This function is used for conversion of string variable to double.
+ *
+ * @description With help of this function string type variable is converted to double. 
+ *
+ */
 double stod(const char* s){
   double rez = 0, fact = 1;
   if (*s == '-'){
@@ -79,7 +102,14 @@ double stod(const char* s){
 
 
 
-//  wraper function for printing ticket info
+/**
+ * @brief Wrapper function is being used.
+ *
+ * @description In this function wrapper function is used for printing ticket information. 
+ * 
+ * @return Return value for this function is void.
+ *
+ */
 void display_ticket_info_input() {
 	int movie_id=-1;
 
@@ -87,8 +117,17 @@ void display_ticket_info_input() {
 	
 }
 
-// displays the ticket info
-void display_ticket_info(int movie_id) {
+/**
+ * @brief This function is used to display ticket information and details.
+ *
+ * @param[in] movie_id - This is of int type and this parameter gives away particular id to movie.
+ *
+ * @description By using above listed parameter, this function is used to display ticket information such as customer id, movie name and id, seat number. 
+ * 
+ * @return integer type value.
+ *
+ */
+int display_ticket_info(int movie_id) {
 	char sql_string[500] = "";
 	sprintf(sql_string, "select distinct seats.customer,seats.seatnumber,movie.id,movie.name from movie join seats where movie.id = %d;", movie_id);
 	if (movie_id == -1)
@@ -98,7 +137,7 @@ void display_ticket_info(int movie_id) {
 	if (result == NULL)
 	{
 		printf("%s", mysql_error(con));
-		return;
+		return 1;
 	}
 	MYSQL_ROW row;
 	printf("|%-15s|%-15s|%-10s|%-24s|\n\n", "CUSTOMER ID", "SEAT NUMBER", "MOVIE ID", "NAME");
@@ -106,4 +145,5 @@ void display_ticket_info(int movie_id) {
 	{
 		printf("|%-15s|%-15s|%-10s|%-24s|\n", row[0], row[1], row[2], row[3]);
 	}
+	return 0;
 }

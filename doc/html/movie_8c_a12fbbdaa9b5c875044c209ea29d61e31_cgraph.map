@@ -1,0 +1,5 @@
+<map id="add_movie_input" name="add_movie_input">
+<area shape="rect" id="node1" title="This function takes input values for add_movie() function." alt="" coords="5,31,124,57"/>
+<area shape="rect" id="node2" href="$movie_8c.html#a7460629ee0b541dff33732f01154cbde" title=" " alt="" coords="172,5,255,32"/>
+<area shape="rect" id="node3" href="$movie_8c.html#af9daea4648bf4da5692547d11243edea" title="A function to input the date of movie from the customer." alt="" coords="172,56,255,83"/>
+</map>

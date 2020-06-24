@@ -1,0 +1,5 @@
+<map id="add_customer" name="add_customer">
+<area shape="rect" id="node1" title="This function takes name, balance, sex, password as its input parameters for signing up new customer." alt="" coords="291,5,395,32"/>
+<area shape="rect" id="node2" href="$customer_8c.html#ac89066b4e1a28986488e592dddfac502" title="This function takes input value for add_customer_input()" alt="" coords="104,5,243,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
