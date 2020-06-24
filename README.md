@@ -12,12 +12,12 @@ System will automatically generate tickets with unique id and user can use the t
 * Paramveer Singh - paramveersingh3@cmail.carleton.ca
 
 # Installation
-This document contains the installation steps [user_manual.docx](https://github.com/karunarora/Group_B_theatreReservationSystem/tree/development/doc/user_manual.docx)
+This document contains the installation steps [user_manual.docx](https://github.com/karunarora/Group_B_theatreReservationSystem/blob/readme_file/doc/user_manual.docx)
 
 # Usage
 
 To run the project, it should be installed first. Then just follow the instructions mentioned in
-[user_manual.docx](https://github.com/karunarora/Group_B_theatreReservationSystem/tree/development/doc/user_manual.docx)
+[user_manual.docx](https://github.com/karunarora/Group_B_theatreReservationSystem/blob/readme_file/doc/user_manual.docx)
 
 
 # File Strucutre
