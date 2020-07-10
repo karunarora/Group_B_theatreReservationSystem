@@ -83,10 +83,4 @@ To run the project, it should be installed first. Then just follow the instructi
 The developer manual is available [here](https://github.com/karunarora/Group_B_theatreReservationSystem/blob/development/doc/developer_guide.docx)
 
 
-# License
 
-This project is licensed under the GPL 2.0 License - see the LICENSE.md file for details
-
-
-# Acknowledgements
-Thank to our professor Dr. Cristina Ruiz Martin for guiding us throughout the course on how to develop the software.
